@@ -1,519 +1,2992 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pradeep Kumar Patra — IT System Administrator</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  :root{
-    --bg-void: #0a0e17;
-    --bg-surface: #10182a;
-    --bg-raised: #172038;
-    --border: #232e49;
-    --border-soft: #1a2338;
-    --text-primary: #e8edf7;
-    --text-muted: #8b97b3;
-    --text-faint: #4d5873;
-    --accent: #4fd1c5;
-    --accent-dim: #2f7d76;
-    --accent-warn: #f0a84e;
-    --accent-up: #4ade80;
-    --font-display: 'Space Grotesk', sans-serif;
-    --font-mono: 'JetBrains Mono', monospace;
-    --font-body: 'Inter', sans-serif;
-  }
+  <title>Pradeep Kumar Patra — Cybersecurity & Network Security</title>
 
-  *{ margin:0; padding:0; box-sizing:border-box; }
+  <meta
+    name="description"
+    content="Pradeep Kumar Patra — IT System Administrator with experience in networking, firewall security, infrastructure, Microsoft 365 and cybersecurity engineering."
+  />
 
-  html{ scroll-behavior:smooth; }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  body{
-    background:var(--bg-void);
-    color:var(--text-primary);
-    font-family:var(--font-body);
-    line-height:1.6;
-    background-image:
-      radial-gradient(circle at 15% 0%, rgba(79,209,197,0.07), transparent 45%),
-      radial-gradient(circle at 85% 15%, rgba(240,168,78,0.05), transparent 40%);
-  }
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
 
-  a{ color:inherit; text-decoration:none; }
-  ul{ list-style:none; }
+  <style>
 
-  ::selection{ background:var(--accent); color:var(--bg-void); }
+    /* =========================================================
+       ROOT
+    ========================================================= */
 
-  .wrap{ max-width:1080px; margin:0 auto; padding:0 32px; }
+    :root {
+      --bg-void: #070b12;
+      --bg-surface: #0d1421;
+      --bg-raised: #121c2d;
 
-  /* ---------- NAV ---------- */
-  header{
-    position:fixed; top:0; left:0; right:0; z-index:100;
-    background:rgba(10,14,23,0.82);
-    backdrop-filter:blur(10px);
-    border-bottom:1px solid var(--border-soft);
-  }
-  nav.wrap{ display:flex; align-items:center; justify-content:space-between; height:64px; }
-  .brand{
-    font-family:var(--font-mono); font-size:14px; font-weight:500;
-    color:var(--text-primary); white-space:nowrap;
-  }
-  .brand .blink{ color:var(--accent); animation:blink 1.1s steps(1) infinite; }
-  @keyframes blink{ 50%{ opacity:0; } }
+      --border: #1d2b42;
+      --border-soft: #152136;
 
-  .nav-links{ display:flex; gap:28px; }
-  .nav-links a{
-    font-family:var(--font-mono); font-size:13px; color:var(--text-muted);
-    padding:6px 2px; border-bottom:2px solid transparent; transition:color .2s, border-color .2s;
-  }
-  .nav-links a:hover, .nav-links a.active{ color:var(--accent); border-color:var(--accent); }
+      --text-primary: #e8eef8;
+      --text-muted: #8b9ab2;
+      --text-faint: #52627c;
 
-  .nav-toggle{ display:none; background:none; border:1px solid var(--border); border-radius:6px; width:38px; height:38px; color:var(--text-primary); font-family:var(--font-mono); font-size:16px; cursor:pointer; }
+      --accent: #35e0c2;
+      --accent-dim: #238e7c;
 
-  /* ---------- HERO ---------- */
-  #home{ padding:150px 0 100px; }
-  .hero-grid{ display:grid; grid-template-columns:1.05fr 0.95fr; gap:48px; align-items:center; }
+      --warning: #f4b860;
+      --danger: #ff667a;
+      --success: #48e08a;
+      --blue: #67a9ff;
 
-  .eyebrow{
-    font-family:var(--font-mono); font-size:13px; color:var(--accent);
-    display:flex; align-items:center; gap:8px; margin-bottom:18px; letter-spacing:.02em;
-  }
-  .eyebrow::before{ content:"$"; color:var(--text-faint); }
-
-  h1.name{
-    font-family:var(--font-display); font-weight:800;
-    font-size:clamp(30px, 5vw, 52px); line-height:1.08; letter-spacing:-0.01em;
-    margin-bottom:14px;
-  }
-  .role{
-    font-family:var(--font-display); font-weight:500; font-size:18px;
-    color:var(--accent); margin-bottom:18px;
-  }
-  .tagline{ color:var(--text-muted); font-size:16px; max-width:46ch; margin-bottom:32px; }
-
-  .status-box{
-    font-family:var(--font-mono); font-size:12.5px; color:var(--text-muted);
-    background:var(--bg-surface); border:1px solid var(--border); border-radius:8px;
-    padding:14px 18px; max-width:340px; margin-bottom:32px;
-  }
-  .status-box .row{ display:flex; justify-content:space-between; padding:3px 0; }
-  .status-box .ok{ color:var(--accent-up); }
-  .status-box .row + .row{ border-top:1px dashed var(--border-soft); }
-
-  .cta-row{ display:flex; gap:14px; flex-wrap:wrap; }
-  .btn{
-    font-family:var(--font-mono); font-size:13px; padding:12px 20px; border-radius:6px;
-    display:inline-flex; align-items:center; gap:8px; transition:transform .15s, background .2s, border-color .2s;
-  }
-  .btn-primary{ background:var(--accent); color:#06110f; font-weight:600; }
-  .btn-primary:hover{ transform:translateY(-2px); }
-  .btn-ghost{ border:1px solid var(--border); color:var(--text-primary); }
-  .btn-ghost:hover{ border-color:var(--accent); color:var(--accent); transform:translateY(-2px); }
-
-  /* topology diagram */
-  .topo-wrap{ display:flex; justify-content:center; }
-  .topo-wrap svg{ width:100%; max-width:420px; height:auto; }
-  .topo-link{ stroke:var(--border); stroke-width:1.6; fill:none; }
-  .topo-flow{
-    stroke:var(--accent); stroke-width:1.6; fill:none;
-    stroke-dasharray:6 8; animation:flow 2.4s linear infinite;
-    opacity:.85;
-  }
-  @keyframes flow{ to{ stroke-dashoffset:-140; } }
-  .topo-node rect{ fill:var(--bg-surface); stroke:var(--border); stroke-width:1; }
-  .topo-node text{ font-family:var(--font-mono); fill:var(--text-primary); }
-  .topo-node .sub{ fill:var(--text-faint); font-size:8px; }
-  .topo-led{ fill:var(--accent-up); animation:pulse 1.8s ease-in-out infinite; }
-  @keyframes pulse{ 0%,100%{ opacity:1; } 50%{ opacity:.35; } }
-
-  /* ---------- SECTIONS ---------- */
-  section{ padding:90px 0; border-top:1px solid var(--border-soft); }
-  .section-head{ margin-bottom:44px; }
-  .section-title{ font-family:var(--font-display); font-weight:600; font-size:28px; }
-
-  .reveal{ opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease; }
-  .reveal.in{ opacity:1; transform:translateY(0); }
-
-  /* about */
-  #about p{ color:var(--text-muted); max-width:66ch; font-size:16px; }
-  #about p + p{ margin-top:14px; }
-  #about .highlight{ color:var(--text-primary); }
-
-  /* experience */
-  .log{ display:flex; flex-direction:column; gap:0; }
-  .log-entry{
-    display:grid; grid-template-columns:150px 1fr; gap:24px;
-    padding:26px 0; border-top:1px dashed var(--border-soft);
-  }
-  .log-entry:first-child{ border-top:none; }
-  .log-date{ font-family:var(--font-mono); font-size:12.5px; color:var(--accent-warn); white-space:nowrap; }
-  .log-role{ font-family:var(--font-display); font-weight:600; font-size:17px; margin-bottom:4px; }
-  .log-co{ color:var(--text-muted); font-size:14px; }
-
-  /* featured project */
-  .case-file{
-    background:var(--bg-surface); border:1px solid var(--border); border-radius:12px;
-    padding:36px; display:grid; grid-template-columns:1fr 1fr; gap:36px;
-  }
-  .case-meta{ font-family:var(--font-mono); font-size:12.5px; color:var(--text-faint); margin-bottom:8px; }
-  .case-file h3{ font-family:var(--font-display); font-size:22px; font-weight:600; margin-bottom:6px; }
-  .case-file .client{ color:var(--accent); font-family:var(--font-mono); font-size:13px; margin-bottom:18px; }
-  .scope-list{ display:flex; flex-direction:column; gap:12px; }
-  .scope-list li{ display:flex; gap:10px; font-size:14.5px; color:var(--text-muted); align-items:flex-start; }
-  .scope-list li::before{ content:"▹"; color:var(--accent); flex-shrink:0; }
-
-  /* skills / patch panel */
-  .rack{ margin-bottom:30px; }
-  .rack:last-child{ margin-bottom:0; }
-  .rack-label{ font-family:var(--font-mono); font-size:12px; color:var(--text-faint); margin-bottom:12px; text-transform:uppercase; letter-spacing:.06em; }
-  .port-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(190px,1fr)); gap:10px; }
-  .port{
-    display:flex; align-items:center; gap:10px; background:var(--bg-surface);
-    border:1px solid var(--border); border-radius:7px; padding:12px 14px;
-  }
-  .led{ width:8px; height:8px; border-radius:50%; background:var(--accent-up); box-shadow:0 0 8px var(--accent-up); flex-shrink:0; animation:pulse 2.4s ease-in-out infinite; }
-  .port span{ font-family:var(--font-mono); font-size:13px; }
-
-  /* certs / education */
-  .cred-grid{ display:grid; grid-template-columns:1fr 1fr; gap:36px; }
-  .cred-list li{ padding:14px 0; border-top:1px dashed var(--border-soft); }
-  .cred-list li:first-child{ border-top:none; }
-  .cred-name{ font-weight:600; font-size:15px; }
-  .cred-issuer{ font-family:var(--font-mono); font-size:12px; color:var(--text-faint); margin-top:2px; }
-
-  /* contact */
-  #contact .wrap{ text-align:center; }
-  #contact .section-title{ font-size:32px; margin-bottom:12px; }
-  #contact p{ color:var(--text-muted); margin-bottom:34px; }
-  .contact-row{ display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
-
-  footer{ padding:36px 0; text-align:center; font-family:var(--font-mono); font-size:12px; color:var(--text-faint); }
-
-  /* ---------- RESPONSIVE ---------- */
-  @media (max-width:860px){
-    .nav-links{
-      position:absolute; top:64px; left:0; right:0; background:var(--bg-void);
-      border-bottom:1px solid var(--border-soft); flex-direction:column; padding:18px 32px; gap:16px;
-      display:none;
+      --font-display: "Space Grotesk", sans-serif;
+      --font-mono: "JetBrains Mono", monospace;
+      --font-body: "Inter", sans-serif;
     }
-    .nav-links.open{ display:flex; }
-    .nav-toggle{ display:block; }
-    .hero-grid{ grid-template-columns:1fr; }
-    .topo-wrap{ order:-1; margin-bottom:8px; }
-    .case-file{ grid-template-columns:1fr; }
-    .cred-grid{ grid-template-columns:1fr; }
-  }
-  @media (max-width:560px){
-    .wrap{ padding:0 20px; }
-    section{ padding:64px 0; }
-    .log-entry{ grid-template-columns:1fr; gap:6px; }
-  }
 
-  @media (prefers-reduced-motion: reduce){
-    *{ animation:none !important; transition:none !important; }
-  }
-</style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg-void);
+      color: var(--text-primary);
+      font-family: var(--font-body);
+      line-height: 1.6;
+
+      background-image:
+        radial-gradient(
+          circle at 15% 0%,
+          rgba(53, 224, 194, 0.07),
+          transparent 40%
+        ),
+        radial-gradient(
+          circle at 90% 20%,
+          rgba(103, 169, 255, 0.05),
+          transparent 38%
+        );
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    ::selection {
+      background: var(--accent);
+      color: #06100e;
+    }
+
+    .wrap {
+      max-width: 1120px;
+      margin: auto;
+      padding: 0 32px;
+    }
+
+    /* =========================================================
+       NAVIGATION
+    ========================================================= */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+
+      z-index: 100;
+
+      background: rgba(7, 11, 18, 0.88);
+      backdrop-filter: blur(12px);
+
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    nav.wrap {
+      height: 66px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .brand .prompt {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      font-family: var(--font-mono);
+      font-size: 12px;
+
+      color: var(--text-muted);
+
+      padding: 6px 2px;
+
+      border-bottom: 2px solid transparent;
+
+      transition:
+        color 0.2s,
+        border-color 0.2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .nav-toggle {
+      display: none;
+
+      width: 38px;
+      height: 38px;
+
+      background: none;
+
+      color: var(--text-primary);
+
+      border: 1px solid var(--border);
+      border-radius: 6px;
+
+      font-family: var(--font-mono);
+
+      cursor: pointer;
+    }
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
+    #home {
+      min-height: 100vh;
+
+      padding: 150px 0 100px;
+
+      display: flex;
+      align-items: center;
+
+      border: none;
+    }
+
+    .hero-grid {
+      display: grid;
+
+      grid-template-columns: 1.08fr 0.92fr;
+
+      gap: 60px;
+
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+
+      gap: 8px;
+
+      margin-bottom: 18px;
+
+      color: var(--accent);
+
+      font-family: var(--font-mono);
+
+      font-size: 12px;
+
+      letter-spacing: 0.02em;
+    }
+
+    .eyebrow::before {
+      content: "$";
+      color: var(--text-faint);
+    }
+
+    h1.name {
+      font-family: var(--font-display);
+
+      font-size: clamp(36px, 6vw, 58px);
+
+      line-height: 1.05;
+
+      letter-spacing: -0.02em;
+
+      margin-bottom: 16px;
+    }
+
+    .role {
+      color: var(--accent);
+
+      font-family: var(--font-display);
+
+      font-size: 20px;
+
+      font-weight: 600;
+
+      margin-bottom: 18px;
+    }
+
+    .tagline {
+      max-width: 60ch;
+
+      color: var(--text-muted);
+
+      font-size: 16px;
+
+      margin-bottom: 30px;
+    }
+
+    .highlight {
+      color: var(--text-primary);
+    }
+
+    /* =========================================================
+       TERMINAL STATUS
+    ========================================================= */
+
+    .status-box {
+      max-width: 470px;
+
+      background: var(--bg-surface);
+
+      border: 1px solid var(--border);
+
+      border-radius: 9px;
+
+      padding: 16px 18px;
+
+      margin-bottom: 28px;
+
+      box-shadow:
+        0 15px 50px rgba(0, 0, 0, 0.18);
+    }
+
+    .terminal-header {
+      display: flex;
+      align-items: center;
+
+      gap: 6px;
+
+      padding-bottom: 12px;
+
+      margin-bottom: 8px;
+
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .terminal-dot {
+      width: 7px;
+      height: 7px;
+
+      border-radius: 50%;
+
+      background: var(--accent);
+    }
+
+    .terminal-title {
+      margin-left: 5px;
+
+      font-family: var(--font-mono);
+
+      font-size: 10px;
+
+      color: var(--text-faint);
+    }
+
+    .status-row {
+      display: grid;
+
+      grid-template-columns: 150px 1fr;
+
+      gap: 10px;
+
+      padding: 6px 0;
+
+      font-family: var(--font-mono);
+
+      font-size: 11px;
+    }
+
+    .status-label {
+      color: var(--text-faint);
+    }
+
+    .status-value {
+      color: var(--text-muted);
+    }
+
+    .status-value.ok {
+      color: var(--success);
+    }
+
+    /* =========================================================
+       CTA
+    ========================================================= */
+
+    .cta-row {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      padding: 12px 19px;
+
+      border-radius: 6px;
+
+      font-family: var(--font-mono);
+
+      font-size: 12px;
+
+      transition:
+        transform 0.15s,
+        border-color 0.2s,
+        background 0.2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--accent);
+
+      color: #06100e;
+
+      font-weight: 700;
+    }
+
+    .btn-ghost {
+      border: 1px solid var(--border);
+
+      color: var(--text-primary);
+    }
+
+    .btn-ghost:hover {
+      color: var(--accent);
+
+      border-color: var(--accent);
+    }
+
+    /* =========================================================
+       SECURITY TERMINAL VISUAL
+    ========================================================= */
+
+    .security-terminal {
+      width: 100%;
+      max-width: 450px;
+
+      margin: auto;
+
+      background: #090f19;
+
+      border: 1px solid var(--border);
+
+      border-radius: 10px;
+
+      overflow: hidden;
+
+      box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.3);
+    }
+
+    .terminal-top {
+      display: flex;
+      align-items: center;
+
+      gap: 6px;
+
+      padding: 11px 14px;
+
+      background: var(--bg-surface);
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    .terminal-top span {
+      width: 8px;
+      height: 8px;
+
+      border-radius: 50%;
+
+      background: var(--text-faint);
+    }
+
+    .terminal-top .active {
+      background: var(--success);
+    }
+
+    .terminal-body {
+      padding: 25px;
+
+      font-family: var(--font-mono);
+
+      font-size: 12px;
+
+      line-height: 2;
+    }
+
+    .terminal-line {
+      display: flex;
+
+      gap: 10px;
+    }
+
+    .prompt {
+      color: var(--accent);
+    }
+
+    .command {
+      color: var(--text-primary);
+    }
+
+    .output {
+      color: var(--text-muted);
+
+      padding-left: 22px;
+    }
+
+    .green {
+      color: var(--success);
+    }
+
+    .blue {
+      color: var(--blue);
+    }
+
+    .yellow {
+      color: var(--warning);
+    }
+
+    /* =========================================================
+       SECTIONS
+    ========================================================= */
+
+    section {
+      padding: 95px 0;
+
+      border-top: 1px solid var(--border-soft);
+    }
+
+    .section-head {
+      margin-bottom: 45px;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+
+      font-size: 30px;
+
+      font-weight: 600;
+    }
+
+    .section-subtitle {
+      color: var(--text-muted);
+
+      max-width: 65ch;
+
+      margin-top: 10px;
+
+      font-size: 14px;
+    }
+
+    .reveal {
+      opacity: 0;
+
+      transform: translateY(20px);
+
+      transition:
+        opacity 0.65s ease,
+        transform 0.65s ease;
+    }
+
+    .reveal.in {
+      opacity: 1;
+
+      transform: translateY(0);
+    }
+
+    /* =========================================================
+       ABOUT
+    ========================================================= */
+
+    .about-grid {
+      display: grid;
+
+      grid-template-columns: 1.2fr 0.8fr;
+
+      gap: 50px;
+    }
+
+    .about-text p {
+      color: var(--text-muted);
+
+      font-size: 15.5px;
+
+      margin-bottom: 15px;
+    }
+
+    .career-path {
+      background: var(--bg-surface);
+
+      border: 1px solid var(--border);
+
+      border-radius: 10px;
+
+      padding: 24px;
+    }
+
+    .career-label {
+      font-family: var(--font-mono);
+
+      color: var(--text-faint);
+
+      font-size: 11px;
+
+      margin-bottom: 18px;
+    }
+
+    .path {
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 8px;
+    }
+
+    .path-item {
+      padding: 10px 12px;
+
+      background: var(--bg-raised);
+
+      border: 1px solid var(--border-soft);
+
+      border-radius: 5px;
+
+      font-family: var(--font-mono);
+
+      font-size: 11px;
+
+      color: var(--text-muted);
+    }
+
+    .path-item.current {
+      color: var(--accent);
+
+      border-color: var(--accent-dim);
+
+      background: rgba(53, 224, 194, 0.05);
+    }
+
+    .path-arrow {
+      color: var(--text-faint);
+
+      text-align: center;
+
+      font-family: var(--font-mono);
+    }
+
+    /* =========================================================
+       EXPERIENCE
+    ========================================================= */
+
+    .experience-log {
+      display: flex;
+
+      flex-direction: column;
+    }
+
+    .experience-entry {
+      display: grid;
+
+      grid-template-columns: 150px 1fr;
+
+      gap: 30px;
+
+      padding: 28px 0;
+
+      border-top: 1px dashed var(--border-soft);
+    }
+
+    .experience-entry:first-child {
+      border-top: none;
+    }
+
+    .experience-date {
+      color: var(--warning);
+
+      font-family: var(--font-mono);
+
+      font-size: 11px;
+    }
+
+    .experience-role {
+      font-family: var(--font-display);
+
+      font-size: 18px;
+
+      font-weight: 600;
+
+      margin-bottom: 4px;
+    }
+
+    .experience-company {
+      color: var(--accent);
+
+      font-family: var(--font-mono);
+
+      font-size: 12px;
+
+      margin-bottom: 10px;
+    }
+
+    .experience-description {
+      color: var(--text-muted);
+
+      font-size: 14px;
+
+      max-width: 70ch;
+    }
+
+    /* =========================================================
+       CYBERSECURITY PROJECT
+    ========================================================= */
+
+    .project-card {
+      background: var(--bg-surface);
+
+      border: 1px solid var(--border);
+
+      border-radius: 12px;
+
+      padding: 35px;
+
+      position: relative;
+
+      overflow: hidden;
+    }
+
+    .project-card::before {
+      content: "";
+
+      position: absolute;
+
+      top: 0;
+      left: 0;
+      right: 0;
+
+      height: 2px;
+
+      background: var(--accent);
+    }
+
+    .project-grid {
+      display: grid;
+
+      grid-template-columns: 1.1fr 0.9fr;
+
+      gap: 45px;
+    }
+
+    .project-label {
+      color: var(--accent);
+
+      font-family: var(--font-mono);
+
+      font-size: 11px;
+
+      margin-bottom: 10px;
+    }
+
+    .project-title {
+      font-family: var(--font-display);
+
+      font-size: 25px;
+
+      margin-bottom: 7px;
+    }
+
+    .project-stack {
+      color: var(--text-faint);
+
+      font-family: var(--font-mono);
+
+      font-size: 11px;
+
+      margin-bottom: 20px;
+    }
+
+    .project-description {
+      color: var(--text-muted);
+
+      font-size: 14px;
+
+      margin-bottom: 20px;
+    }
+
+    .project-features {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 10px;
+    }
+
+    .project-feature {
+      padding: 10px;
+
+      background: var(--bg-raised);
+
+      border: 1px solid var(--border-soft);
+
+      border-radius: 5px;
+
+      color: var(--text-muted);
+
+      font-family: var(--font-mono);
+
+      font-size: 10px;
+    }
+
+    .project-feature::before {
+      content: "✓ ";
+
+      color: var(--success);
+    }
+
+    /* =========================================================
+       SECURITY PIPELINE
+    ========================================================= */
+
+    .pipeline {
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 8px;
+
+      justify-content: center;
+    }
+
+    .pipeline-item {
+      display: flex;
+
+      align-items: center;
+
+      gap: 12px;
+
+      padding: 12px 14px;
+
+      background: #090f19;
+
+      border: 1px solid var(--border);
+
+      border-radius: 6px;
+
+      font-family: var(--font-mono);
+
+      font-size: 11px;
+    }
+
+    .pipeline-number {
+      width: 22px;
+      height: 22px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+
+      background: rgba(53, 224, 194, 0.08);
+
+      color: var(--accent);
+
+      font-size: 10px;
+    }
+
+    .pipeline-arrow {
+      text-align: center;
+
+      color: var(--text-faint);
+
+      font-family: var(--font-mono);
+
+      font-size: 10px;
+    }
+
+    /* =========================================================
+       SECONDARY PROJECT
+    ========================================================= */
+
+    .secondary-project {
+      margin-top: 22px;
+
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 30px;
+
+      padding: 28px;
+
+      background: var(--bg-surface);
+
+      border: 1px solid var(--border);
+
+      border-radius: 10px;
+    }
+
+    .secondary-project h3 {
+      font-family: var(--font-display);
+
+      font-size: 20px;
+
+      margin-bottom: 7px;
+    }
+
+    .secondary-project .client {
+      color: var(--accent);
+
+      font-family: var(--font-mono);
+
+      font-size: 11px;
+
+      margin-bottom: 15px;
+    }
+
+    .secondary-project p {
+      color: var(--text-muted);
+
+      font-size: 13px;
+    }
+
+    .project-list {
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 8px;
+    }
+
+    .project-list li {
+      color: var(--text-muted);
+
+      font-size: 13px;
+    }
+
+    .project-list li::before {
+      content: "▹ ";
+
+      color: var(--accent);
+    }
+
+    /* =========================================================
+       SKILLS
+    ========================================================= */
+
+    .skill-group {
+      margin-bottom: 35px;
+    }
+
+    .skill-group:last-child {
+      margin-bottom: 0;
+    }
+
+    .skill-title {
+      color: var(--text-faint);
+
+      font-family: var(--font-mono);
+
+      font-size: 11px;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.08em;
+
+      margin-bottom: 13px;
+    }
+
+    .skill-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(auto-fill, minmax(190px, 1fr));
+
+      gap: 10px;
+    }
+
+    .skill {
+      display: flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      padding: 13px;
+
+      background: var(--bg-surface);
+
+      border: 1px solid var(--border);
+
+      border-radius: 6px;
+
+      transition:
+        border-color 0.2s,
+        transform 0.2s;
+    }
+
+    .skill:hover {
+      border-color: var(--accent-dim);
+
+      transform: translateY(-2px);
+    }
+
+    .skill-dot {
+      width: 7px;
+      height: 7px;
+
+      flex-shrink: 0;
+
+      border-radius: 50%;
+
+      background: var(--accent);
+
+      box-shadow: 0 0 8px rgba(53, 224, 194, 0.5);
+    }
+
+    .skill span:last-child {
+      font-family: var(--font-mono);
+
+      font-size: 11px;
+    }
+
+    /* =========================================================
+       SECURITY FOCUS
+    ========================================================= */
+
+    .security-focus {
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      gap: 12px;
+    }
+
+    .focus-card {
+      padding: 20px;
+
+      background: var(--bg-surface);
+
+      border: 1px solid var(--border);
+
+      border-radius: 8px;
+    }
+
+    .focus-icon {
+      font-family: var(--font-mono);
+
+      color: var(--accent);
+
+      font-size: 18px;
+
+      margin-bottom: 12px;
+    }
+
+    .focus-card h3 {
+      font-family: var(--font-display);
+
+      font-size: 15px;
+
+      margin-bottom: 7px;
+    }
+
+    .focus-card p {
+      color: var(--text-muted);
+
+      font-size: 12px;
+    }
+
+    /* =========================================================
+       CREDENTIALS
+    ========================================================= */
+
+    .credential-grid {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 50px;
+    }
+
+    .credential-list li {
+      padding: 15px 0;
+
+      border-top: 1px dashed var(--border-soft);
+    }
+
+    .credential-list li:first-child {
+      border-top: none;
+    }
+
+    .credential-name {
+      font-weight: 600;
+
+      font-size: 14px;
+    }
+
+    .credential-note {
+      color: var(--text-faint);
+
+      font-family: var(--font-mono);
+
+      font-size: 10px;
+
+      margin-top: 3px;
+    }
+
+    /* =========================================================
+       CAREER DIRECTION
+    ========================================================= */
+
+    .direction-card {
+      padding: 35px;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(53, 224, 194, 0.04),
+          rgba(103, 169, 255, 0.03)
+        );
+
+      border: 1px solid var(--border);
+
+      border-radius: 10px;
+    }
+
+    .direction-card h3 {
+      font-family: var(--font-display);
+
+      font-size: 23px;
+
+      margin-bottom: 12px;
+    }
+
+    .direction-card p {
+      max-width: 75ch;
+
+      color: var(--text-muted);
+
+      font-size: 14px;
+
+      margin-bottom: 25px;
+    }
+
+    .direction-tags {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 8px;
+    }
+
+    .direction-tag {
+      padding: 8px 12px;
+
+      border: 1px solid var(--border);
+
+      border-radius: 5px;
+
+      color: var(--accent);
+
+      background: var(--bg-surface);
+
+      font-family: var(--font-mono);
+
+      font-size: 10px;
+    }
+
+    /* =========================================================
+       CONTACT
+    ========================================================= */
+
+    #contact {
+      text-align: center;
+    }
+
+    #contact .eyebrow {
+      justify-content: center;
+    }
+
+    #contact .section-title {
+      font-size: 34px;
+
+      margin-bottom: 12px;
+    }
+
+    #contact p {
+      max-width: 600px;
+
+      margin: 0 auto 30px;
+
+      color: var(--text-muted);
+
+      font-size: 14px;
+    }
+
+    .contact-row {
+      display: flex;
+
+      justify-content: center;
+
+      flex-wrap: wrap;
+
+      gap: 12px;
+    }
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    footer {
+      padding: 35px 0;
+
+      text-align: center;
+
+      border-top: 1px solid var(--border-soft);
+
+      color: var(--text-faint);
+
+      font-family: var(--font-mono);
+
+      font-size: 10px;
+    }
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+
+    @media (max-width: 900px) {
+
+      .nav-links {
+        position: absolute;
+
+        top: 66px;
+        left: 0;
+        right: 0;
+
+        display: none;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 18px 32px;
+
+        background: var(--bg-void);
+
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-toggle {
+        display: block;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .security-terminal {
+        max-width: 100%;
+      }
+
+      .about-grid,
+      .project-grid,
+      .secondary-project {
+        grid-template-columns: 1fr;
+      }
+
+      .security-focus {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .credential-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .wrap {
+        padding: 0 20px;
+      }
+
+      section {
+        padding: 70px 0;
+      }
+
+      #home {
+        padding: 125px 0 75px;
+      }
+
+      .experience-entry {
+        grid-template-columns: 1fr;
+
+        gap: 7px;
+      }
+
+      .project-features {
+        grid-template-columns: 1fr;
+      }
+
+      .security-focus {
+        grid-template-columns: 1fr;
+      }
+
+      .status-row {
+        grid-template-columns: 1fr;
+      }
+
+      .status-label {
+        margin-bottom: -5px;
+      }
+
+      .nav-links {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+  </style>
 </head>
+
 <body>
 
-<header>
-  <nav class="wrap">
-    <div class="brand">pradeep<span class="blink">@</span>network<span class="blink">:~$</span></div>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#about" data-nav>--about</a></li>
-      <li><a href="#experience" data-nav>--experience</a></li>
-      <li><a href="#project" data-nav>--project</a></li>
-      <li><a href="#skills" data-nav>--skills</a></li>
-      <li><a href="#credentials" data-nav>--credentials</a></li>
-      <li><a href="#contact" data-nav>--contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <!-- =======================================================
+       NAVIGATION
+  ======================================================== -->
 
-<main>
+  <header>
 
-  <!-- HERO -->
-  <section id="home" style="border-top:none;">
-    <div class="wrap hero-grid">
-      <div>
-        <div class="eyebrow">whoami</div>
-        <h1 class="name">Pradeep Kumar Patra</h1>
-        <div class="role">IT System Administrator — Network &amp; Infrastructure</div>
-        <p class="tagline">Building and hardening the networks that keep businesses running — from greenfield infrastructure rollouts to day-to-day firewall, switching, and directory operations.</p>
+    <nav class="wrap">
 
-        <div class="status-box">
-          <div class="row"><span>STATUS</span><span class="ok">● OPERATIONAL</span></div>
-          <div class="row"><span>CURRENT LOCATION</span><span>Mumbai, IN</span></div>
-          <div class="row"><span>PERMANENT LOCATION</span><span>CUTTACK, ODISHA, IN</span></div>
-          <div class="row"><span>EXPERIENCE</span><span>5+ years</span></div>
-          <div class="row"><span>CORE STACK</span><span>FortiGate · Cisco · AD · O365</span></div>
-        </div>
-
-        <div class="cta-row">
-          <a class="btn btn-primary" href="https://www.linkedin.com/in/pradeep-kumar-patra-83824a1b1" target="_blank" rel="noopener">View LinkedIn ↗</a>
-          <a class="btn btn-ghost" href="#contact">Get in touch ↓</a>
-        </div>
+      <div class="brand">
+        pradeep<span class="prompt">@</span>security<span class="prompt">:~$</span>
       </div>
 
-      <div class="topo-wrap">
-        <svg viewBox="0 0 320 340" xmlns="http://www.w3.org/2000/svg">
-          <!-- links -->
-          <path class="topo-link" d="M160 30 L160 70" />
-          <path class="topo-flow" d="M160 30 L160 70" />
-          <path class="topo-link" d="M160 110 L160 150" />
-          <path class="topo-flow" d="M160 110 L160 150" />
-          <path class="topo-link" d="M160 190 L70 250" />
-          <path class="topo-flow" d="M160 190 L70 250" />
-          <path class="topo-link" d="M160 190 L160 250" />
-          <path class="topo-flow" d="M160 190 L160 250" />
-          <path class="topo-link" d="M160 190 L250 250" />
-          <path class="topo-flow" d="M160 190 L250 250" />
+      <button
+        class="nav-toggle"
+        id="navToggle"
+        aria-label="Toggle navigation"
+      >
+        ☰
+      </button>
 
-          <!-- WAN -->
-          <g class="topo-node">
-            <rect x="120" y="6" width="80" height="24" rx="6"/>
-            <circle class="topo-led" cx="130" cy="18" r="2.5"/>
-            <text x="140" y="21" font-size="9">WAN UPLINK</text>
-          </g>
+      <ul class="nav-links" id="navLinks">
 
-          <!-- Firewall -->
-          <g class="topo-node">
-            <rect x="110" y="70" width="100" height="40" rx="6"/>
-            <circle class="topo-led" cx="122" cy="84" r="2.5"/>
-            <text x="132" y="88" font-size="9.5">FIREWALL</text>
-            <text class="sub" x="132" y="99">FortiGate</text>
-          </g>
+        <li>
+          <a href="#about" data-nav>--about</a>
+        </li>
 
-          <!-- Router -->
-          <g class="topo-node">
-            <rect x="110" y="70" width="100" height="40" rx="6"/>
-            <circle class="topo-led" cx="122" cy="84" r="2.5"/>
-            <text x="132" y="88" font-size="9.5">ROUTER</text>
-            <text class="sub" x="132" y="99">BGP/OSPF</text>
-          </g>
+        <li>
+          <a href="#experience" data-nav>--experience</a>
+        </li>
 
-          <!-- Core switch -->
-          <g class="topo-node">
-            <rect x="100" y="150" width="120" height="40" rx="6"/>
-            <circle class="topo-led" cx="112" cy="164" r="2.5"/>
-            <text x="122" y="168" font-size="9.5">CORE SWITCH</text>
-            <text class="sub" x="122" y="179">Cisco · VLANs</text>
-          </g>
+        <li>
+          <a href="#projects" data-nav>--projects</a>
+        </li>
 
-          <!-- AD -->
-          <g class="topo-node">
-            <rect x="12" y="250" width="100" height="40" rx="6"/>
-            <circle class="topo-led" cx="24" cy="264" r="2.5"/>
-            <text x="34" y="268" font-size="9">DOMAIN CTRL</text>
-            <text class="sub" x="34" y="279">Windows Server / AD</text>
-          </g>
+        <li>
+          <a href="#skills" data-nav>--skills</a>
+        </li>
 
-          <!-- Monitoring -->
-          <g class="topo-node">
-            <rect x="112" y="250" width="96" height="40" rx="6"/>
-            <circle class="topo-led" cx="124" cy="264" r="2.5"/>
-            <text x="134" y="268" font-size="9">MONITORING</text>
-            <text class="sub" x="134" y="279">Zabbix · Nagios</text>
-          </g>
+        <li>
+          <a href="#credentials" data-nav>--credentials</a>
+        </li>
 
-          <!-- Service desk -->
-          <g class="topo-node">
-            <rect x="212" y="250" width="100" height="40" rx="6"/>
-            <circle class="topo-led" cx="224" cy="264" r="2.5"/>
-            <text x="234" y="268" font-size="9">SERVICE DESK</text>
-            <text class="sub" x="234" y="279">ServiceNow</text>
-          </g>
-        </svg>
-      </div>
-    </div>
-  </section>
+        <li>
+          <a href="#contact" data-nav>--contact</a>
+        </li>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <div class="eyebrow">whoami --verbose</div>
-        <h2 class="section-title">About</h2>
-      </div>
-      <div class="reveal">
-        <p>Around <span class="highlight">five years</span> in IT infrastructure and network engineering — starting in desktop support, moving into IT consulting on client infrastructure projects, and now administering firewalls, switching, and directory services as an <span class="highlight">IT System Administrator in Mumbai</span>.</p>
-        <p>Core strength is in <span class="highlight">FortiGate firewall management</span>, <span class="highlight">Cisco switching and VLANs</span>, and routing with <span class="highlight">OSPF and BGP</span> — backed by day-to-day work in network monitoring, Windows Server, Active Directory, and IT service management tooling.</p>
-      </div>
-    </div>
-  </section>
+      </ul>
 
-  <!-- EXPERIENCE -->
-  <section id="experience">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <div class="eyebrow">cat career.log</div>
-        <h2 class="section-title">Experience</h2>
-      </div>
-      <div class="log reveal">
-        <div class="log-entry">
-          <div class="log-date">2026 — present</div>
-          <div>
-            <div class="log-role">IT System Administrator</div>
-            <div class="log-co">Digimaze Marketing Pvt. Ltd. · Mumbai</div>
-          </div>
-        </div>
-        <div class="log-entry">
-          <div class="log-date">2025 — 2026</div>
-          <div>
-            <div class="log-role">IT Associate Consultant</div>
-            <div class="log-co">Litmus Information System LLP · Bharuch, Gujarat</div>
-          </div>
-        </div>
-        <div class="log-entry">
-          <div class="log-date">2021 — 2025</div>
-          <div>
-            <div class="log-role">Desktop Support Engineer</div>
-            <div class="log-co">Teamlease Digital Pvt Ltd · Bhubaneswar, Odisha</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </nav>
 
-  <!-- FEATURED PROJECT -->
-  <section id="project">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <div class="eyebrow">cat deploy/jesons-industries.log</div>
-        <h2 class="section-title">Featured Deployment</h2>
-      </div>
-      <div class="case-file reveal">
+  </header>
+
+
+  <main>
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section id="home">
+
+      <div class="wrap hero-grid">
+
         <div>
-          <div class="case-meta">CLIENT PROJECT</div>
-          <h3>Greenfield IT Infrastructure Build</h3>
-          <div class="client">Jesons Industries — polymer manufacturing</div>
-          <p style="color:var(--text-muted); font-size:14.5px;">Led the infrastructure build-out from the ground up for a new manufacturing site — designing and standing up the network and physical security systems a plant needed to go live.</p>
-        </div>
-        <ul class="scope-list">
-          <li>HUB room build-out</li>
-          <li>Network &amp; server rack deployment</li>
-          <li>Active Directory setup</li>
-          <li>Access control systems</li>
-          <li>CCTV integration</li>
-          <li>Weighbridge system integration</li>
-        </ul>
-      </div>
-    </div>
-  </section>
 
-  <!-- SKILLS -->
-  <section id="skills">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <div class="eyebrow">show interfaces status</div>
-        <h2 class="section-title">Skills</h2>
-      </div>
-      <div class="reveal">
-        <div class="rack">
-          <div class="rack-label">Rack 1 — Security &amp; Firewall</div>
-          <div class="port-grid">
-            <div class="port"><span class="led"></span><span>FortiGate Firewall Mgmt</span></div>
-            <div class="port"><span class="led"></span><span>VLANs</span></div>
-            <div class="port"><span class="led"></span><span>OSPF</span></div>
-            <div class="port"><span class="led"></span><span>BGP</span></div>
+          <div class="eyebrow">
+            whoami
           </div>
-        </div>
-        <div class="rack">
-          <div class="rack-label">Rack 2 — Switching &amp; Systems</div>
-          <div class="port-grid">
-            <div class="port"><span class="led"></span><span>Cisco Switching</span></div>
-            <div class="port"><span class="led"></span><span>Windows Server</span></div>
-            <div class="port"><span class="led"></span><span>Active Directory</span></div>
-          </div>
-        </div>
-        <div class="rack">
-          <div class="rack-label">Rack 3 — Monitoring &amp; Service Ops</div>
-          <div class="port-grid">
-            <div class="port"><span class="led"></span><span>Zabbix</span></div>
-            <div class="port"><span class="led"></span><span>WhatsUp Gold</span></div>
-            <div class="port"><span class="led"></span><span>Nagios</span></div>
-            <div class="port"><span class="led"></span><span>ServiceNow</span></div>
-            <div class="port"><span class="led"></span><span>ManageEngine</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- CREDENTIALS -->
-  <section id="credentials">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <div class="eyebrow">cat credentials.txt</div>
-        <h2 class="section-title">Certifications &amp; Education</h2>
+          <h1 class="name">
+            Pradeep Kumar Patra
+          </h1>
+
+          <div class="role">
+            IT System Administrator · Network Security · Cybersecurity
+          </div>
+
+          <p class="tagline">
+
+            IT infrastructure and network professional building deeper
+            expertise in <span class="highlight">cybersecurity, network
+            security, security operations and security automation</span>.
+
+            Experienced with firewalls, switching, Microsoft environments,
+            infrastructure operations and security-focused engineering.
+
+          </p>
+
+
+          <!-- TERMINAL STATUS -->
+
+          <div class="status-box">
+
+            <div class="terminal-header">
+
+              <span class="terminal-dot"></span>
+              <span class="terminal-dot"></span>
+              <span class="terminal-dot active"></span>
+
+              <span class="terminal-title">
+                /var/log/pradeep/status
+              </span>
+
+            </div>
+
+
+            <div class="status-row">
+
+              <span class="status-label">
+                STATUS
+              </span>
+
+              <span class="status-value ok">
+                ● OPERATIONAL
+              </span>
+
+            </div>
+
+
+            <div class="status-row">
+
+              <span class="status-label">
+                CURRENT_ROLE
+              </span>
+
+              <span class="status-value">
+                IT System Administrator
+              </span>
+
+            </div>
+
+
+            <div class="status-row">
+
+              <span class="status-label">
+                LOCATION
+              </span>
+
+              <span class="status-value">
+                Mumbai, India
+              </span>
+
+            </div>
+
+
+            <div class="status-row">
+
+              <span class="status-label">
+                EXPERIENCE
+              </span>
+
+              <span class="status-value">
+                5+ years
+              </span>
+
+            </div>
+
+
+            <div class="status-row">
+
+              <span class="status-label">
+                SECURITY_STACK
+              </span>
+
+              <span class="status-value">
+                FortiGate · OCSF · Python · APIs
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="cta-row">
+
+            <a
+              class="btn btn-primary"
+              href="https://www.linkedin.com/in/pradeep-kumar-patra-83824a1b1"
+              target="_blank"
+              rel="noopener"
+            >
+              LinkedIn ↗
+            </a>
+
+            <a
+              class="btn btn-ghost"
+              href="#projects"
+            >
+              View Security Work ↓
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- SECURITY TERMINAL -->
+
+        <div class="security-terminal">
+
+          <div class="terminal-top">
+
+            <span></span>
+            <span></span>
+            <span class="active"></span>
+
+          </div>
+
+
+          <div class="terminal-body">
+
+            <div class="terminal-line">
+
+              <span class="prompt">
+                $
+              </span>
+
+              <span class="command">
+                security-status
+              </span>
+
+            </div>
+
+
+            <div class="output">
+
+              [network] <span class="green">ONLINE</span>
+
+            </div>
+
+            <div class="output">
+
+              [firewall] <span class="green">PROTECTED</span>
+
+            </div>
+
+            <div class="output">
+
+              [identity] <span class="green">MONITORED</span>
+
+            </div>
+
+            <div class="output">
+
+              [events] <span class="blue">NORMALIZED</span>
+
+            </div>
+
+            <div class="output">
+
+              [validation] <span class="green">ACTIVE</span>
+
+            </div>
+
+            <br>
+
+
+            <div class="terminal-line">
+
+              <span class="prompt">
+                $
+              </span>
+
+              <span class="command">
+                career --target
+              </span>
+
+            </div>
+
+
+            <div class="output">
+
+              → Network Security
+
+            </div>
+
+            <div class="output">
+
+              → Security Operations
+
+            </div>
+
+            <div class="output">
+
+              → Cybersecurity Engineering
+
+            </div>
+
+
+            <br>
+
+
+            <div class="terminal-line">
+
+              <span class="prompt">
+                $
+              </span>
+
+              <span class="command">
+                echo $MISSION
+              </span>
+
+            </div>
+
+
+            <div class="output yellow">
+
+              Secure infrastructure.
+              Detect threats.
+              Automate defense.
+
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
-      <div class="cred-grid reveal">
-        <div>
-          <div class="rack-label">Certifications</div>
-          <ul class="cred-list">
-            <li><div class="cred-name">CISSP</div><div class="cred-issuer">Cyberfrat</div></li>
-            <li><div class="cred-name">NSE4 — Part 1 &amp; 2</div><div class="cred-issuer">Udemy</div></li>
-            <li><div class="cred-name">Cybersecurity</div><div class="cred-issuer">Tech Mahindra Foundation</div></li>
+
+    </section>
+
+
+    <!-- =====================================================
+         ABOUT
+    ====================================================== -->
+
+    <section id="about">
+
+      <div class="wrap">
+
+        <div class="section-head reveal">
+
+          <div class="eyebrow">
+            whoami --verbose
+          </div>
+
+          <h2 class="section-title">
+            About Me
+          </h2>
+
+          <p class="section-subtitle">
+            Infrastructure experience with a growing focus on cybersecurity
+            and security engineering.
+          </p>
+
+        </div>
+
+
+        <div class="about-grid">
+
+          <div class="about-text reveal">
+
+            <p>
+
+              I am an <span class="highlight">
+              IT System Administrator
+              </span>
+              with more than five years of experience across IT support,
+              networking, infrastructure and enterprise operations.
+
+            </p>
+
+
+            <p>
+
+              My technical foundation includes
+              <span class="highlight">
+              network troubleshooting, Cisco switching, VLANs,
+              routing, FortiGate firewall administration, Windows Server,
+              Active Directory and Microsoft 365
+              </span>.
+
+            </p>
+
+
+            <p>
+
+              My current career direction is cybersecurity. I am expanding
+              from infrastructure and network security into
+              <span class="highlight">
+              security operations, security event processing,
+              SIEM concepts, Python automation and security engineering
+              </span>.
+
+            </p>
+
+
+            <p>
+
+              I believe strong cybersecurity starts with understanding the
+              infrastructure being protected — networks, identities,
+              endpoints, firewalls, logs and the applications running on top
+              of them.
+
+            </p>
+
+          </div>
+
+
+          <!-- CAREER PATH -->
+
+          <div class="career-path reveal">
+
+            <div class="career-label">
+              /etc/career/path.conf
+            </div>
+
+            <div class="path">
+
+              <div class="path-item">
+                IT SUPPORT
+              </div>
+
+              <div class="path-arrow">
+                ↓
+              </div>
+
+              <div class="path-item">
+                NETWORK & INFRASTRUCTURE
+              </div>
+
+              <div class="path-arrow">
+                ↓
+              </div>
+
+              <div class="path-item current">
+                NETWORK SECURITY
+              </div>
+
+              <div class="path-arrow">
+                ↓
+              </div>
+
+              <div class="path-item">
+                SECURITY OPERATIONS
+              </div>
+
+              <div class="path-arrow">
+                ↓
+              </div>
+
+              <div class="path-item">
+                SECURITY ENGINEERING
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         EXPERIENCE
+    ====================================================== -->
+
+    <section id="experience">
+
+      <div class="wrap">
+
+        <div class="section-head reveal">
+
+          <div class="eyebrow">
+            cat career.log
+          </div>
+
+          <h2 class="section-title">
+            Experience
+          </h2>
+
+        </div>
+
+
+        <div class="experience-log reveal">
+
+
+          <!-- CURRENT -->
+
+          <div class="experience-entry">
+
+            <div class="experience-date">
+              2026 — PRESENT
+            </div>
+
+            <div>
+
+              <div class="experience-role">
+                IT System Administrator
+              </div>
+
+              <div class="experience-company">
+                Digimaze Marketing Pvt. Ltd. · Mumbai
+              </div>
+
+              <div class="experience-description">
+
+                Managing enterprise IT infrastructure with focus on
+                networking, firewall operations, Microsoft 365,
+                infrastructure troubleshooting and security controls.
+
+                Also contributing to security-focused engineering work
+                involving event normalization, validation and API-based
+                processing.
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- LITMUS -->
+
+          <div class="experience-entry">
+
+            <div class="experience-date">
+              2025 — 2026
+            </div>
+
+            <div>
+
+              <div class="experience-role">
+                IT Associate Consultant
+              </div>
+
+              <div class="experience-company">
+                Litmus Information System LLP · Gujarat
+              </div>
+
+              <div class="experience-description">
+
+                Worked across enterprise infrastructure, networking,
+                troubleshooting and client IT environments, developing
+                hands-on experience with network and security technologies.
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- TEAMLEASE -->
+
+          <div class="experience-entry">
+
+            <div class="experience-date">
+              2021 — 2025
+            </div>
+
+            <div>
+
+              <div class="experience-role">
+                Desktop Support Engineer
+              </div>
+
+              <div class="experience-company">
+                TeamLease Digital Pvt. Ltd. · Odisha
+              </div>
+
+              <div class="experience-description">
+
+                Provided enterprise desktop, hardware, software and
+                networking support while developing the operational
+                troubleshooting foundation that later expanded into
+                infrastructure and network administration.
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PROJECTS
+    ====================================================== -->
+
+    <section id="projects">
+
+      <div class="wrap">
+
+        <div class="section-head reveal">
+
+          <div class="eyebrow">
+            ls /projects/security
+          </div>
+
+          <h2 class="section-title">
+            Cybersecurity Projects
+          </h2>
+
+          <p class="section-subtitle">
+
+            Practical work connecting security operations, event processing,
+            networking and automation.
+
+          </p>
+
+        </div>
+
+
+        <!-- PRIMARY SECURITY PROJECT -->
+
+        <div class="project-card reveal">
+
+          <div class="project-grid">
+
+
+            <div>
+
+              <div class="project-label">
+                PRIMARY PROJECT · SECURITY ENGINEERING
+              </div>
+
+              <h3 class="project-title">
+                OCSF Security Event Normalization & Validation
+              </h3>
+
+              <div class="project-stack">
+                Python · FastAPI · OCSF · JSON · REST API · Validation
+              </div>
+
+
+              <p class="project-description">
+
+                Contributing to a security-event processing platform that
+                transforms heterogeneous security telemetry into a
+                standardized OCSF-compatible structure.
+
+                The work involves field transformation, data-type
+                conversion, enumeration mapping, validation and
+                re-validation of security events.
+
+              </p>
+
+
+              <div class="project-features">
+
+                <div class="project-feature">
+                  Schema Detection
+                </div>
+
+                <div class="project-feature">
+                  Field Transformation
+                </div>
+
+                <div class="project-feature">
+                  Data Type Conversion
+                </div>
+
+                <div class="project-feature">
+                  Enumeration Mapping
+                </div>
+
+                <div class="project-feature">
+                  OCSF Normalization
+                </div>
+
+                <div class="project-feature">
+                  Event Validation
+                </div>
+
+                <div class="project-feature">
+                  Re-Validation API
+                </div>
+
+                <div class="project-feature">
+                  Security Automation
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <!-- PIPELINE -->
+
+            <div class="pipeline">
+
+              <div class="pipeline-item">
+
+                <div class="pipeline-number">
+                  01
+                </div>
+
+                <span>
+                  Security Event
+                </span>
+
+              </div>
+
+
+              <div class="pipeline-arrow">
+                ↓
+              </div>
+
+
+              <div class="pipeline-item">
+
+                <div class="pipeline-number">
+                  02
+                </div>
+
+                <span>
+                  Schema Detection
+                </span>
+
+              </div>
+
+
+              <div class="pipeline-arrow">
+                ↓
+              </div>
+
+
+              <div class="pipeline-item">
+
+                <div class="pipeline-number">
+                  03
+                </div>
+
+                <span>
+                  Field Transformation
+                </span>
+
+              </div>
+
+
+              <div class="pipeline-arrow">
+                ↓
+              </div>
+
+
+              <div class="pipeline-item">
+
+                <div class="pipeline-number">
+                  04
+                </div>
+
+                <span>
+                  OCSF Normalization
+                </span>
+
+              </div>
+
+
+              <div class="pipeline-arrow">
+                ↓
+              </div>
+
+
+              <div class="pipeline-item">
+
+                <div class="pipeline-number">
+                  05
+                </div>
+
+                <span>
+                  Validation
+                </span>
+
+              </div>
+
+
+              <div class="pipeline-arrow">
+                ↓
+              </div>
+
+
+              <div class="pipeline-item">
+
+                <div class="pipeline-number">
+                  06
+                </div>
+
+                <span>
+                  Re-Validation API
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- INFRASTRUCTURE PROJECT -->
+
+        <div class="secondary-project reveal">
+
+          <div>
+
+            <div class="project-label">
+              INFRASTRUCTURE · NETWORK SECURITY
+            </div>
+
+            <h3>
+              Greenfield IT Infrastructure Deployment
+            </h3>
+
+            <div class="client">
+              Jesons Industries
+            </div>
+
+            <p>
+
+              Contributed to a greenfield infrastructure deployment involving
+              network, server-room and physical security systems for a
+              manufacturing environment.
+
+            </p>
+
+          </div>
+
+
+          <ul class="project-list">
+
+            <li>
+              Network and server rack deployment
+            </li>
+
+            <li>
+              Active Directory infrastructure
+            </li>
+
+            <li>
+              Network connectivity and switching
+            </li>
+
+            <li>
+              CCTV integration
+            </li>
+
+            <li>
+              Access control systems
+            </li>
+
+            <li>
+              Site infrastructure troubleshooting
+            </li>
+
           </ul>
-        </div>
-        <div>
-          <div class="rack-label">Education</div>
-          <ul class="cred-list">
-            <li><div class="cred-name">B.Sc. in IT Management</div><div class="cred-issuer">Utkal University · 2017 – 2020</div></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- CONTACT -->
-  <section id="contact">
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SKILLS
+    ====================================================== -->
+
+    <section id="skills">
+
+      <div class="wrap">
+
+        <div class="section-head reveal">
+
+          <div class="eyebrow">
+            show security-stack
+          </div>
+
+          <h2 class="section-title">
+            Technical Skills
+          </h2>
+
+          <p class="section-subtitle">
+
+            A combination of infrastructure fundamentals and
+            cybersecurity-focused technologies.
+
+          </p>
+
+        </div>
+
+
+        <div class="reveal">
+
+
+          <!-- SECURITY -->
+
+          <div class="skill-group">
+
+            <div class="skill-title">
+              Security & Firewall
+            </div>
+
+            <div class="skill-grid">
+
+              <div class="skill">
+                <span class="skill-dot"></span>
+                <span>FortiGate Firewall</span>
+              </div>
+
+              <div class="skill">
+                <span class="skill-dot"></span>
+                <span>Firewall Policies</span>
+              </div>
+
+              <div class="skill">
+                <span class="skill-dot"></span>
+                <span>VPN</span>
+              </div>
+
+              <div class="skill">
+                <span class="skill-dot"></span>
+                <span>Network Security</span>
+              </div>
+
+              <div class="skill">
+                <span class="skill-dot"></span>
+                <span>Access Control</span>
+              </div>
+
+              <div class="skill">
+                <span class="skill-dot"></span>
+                <span>Security Monitoring</span>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- NETWORK -->
+
+          <div class="skill-group">
+
+            <div class="skill-title">
+              Network & Infrastructure
+            </div>
+
+            <div class="skill-grid">
+
+              <div class="skill">
+                <span class="skill-dot"></span>
+                <span>Cisco Switching</span>
+              </div>
+
+              <div class="skill">
+                <span class="skill-dot"></span>
+                <span>VLAN</span>
+              </div>
+
+              <div class="skill">
+                <span class="skill-dot"></span>
+                <span>DHCP</span>
+              </div>
+
+              <div class="skill">
+                <span class="skill-dot"></span>
+                <span>DNS</span>
+              </div>
+
+              <div class="skill">
+                <span class="skill-dot"></span>
+                <span>OSPF</span>
+              </div>
+
+              <div class="skill">
+                <span class="skill-dot"></span>
+                <span>BGP</span>
+              </div>
+
+              <div class="skill">
+                <span class="skill-dot"></span>
+                <span>Active Directory</span>
+              </div>
+
+              <div class="skill">
+                <span class="skill-dot"></span>
+                <span>Windows Server</span>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- SECURITY ENGINEERING -->
+
+          <div class="skill-group">
+
+            <div class="skill-title">
+              Security Engineering & Automation
+            </div>
+
+            <div class="skill-grid">
+
+              <div class="skill">
+                <span class="skill-dot"></span>
+                <span>Python</span>
+              </div>
+
+              <div class="skill">
+                <span class="skill-dot"></span>
+                <span>FastAPI</span>
+              </div>
+
+              <div class="skill">
+                <span class="skill-dot"></span>
+                <span>REST APIs</span>
+              </div>
+
+              <div class="skill">
+                <span class="skill-dot"></span>
+                <span>JSON</span>
+              </div>
+
+              <div class="skill">
+                <span class="skill-dot"></span>
+                <span>OCSF</span>
+              </div>
+
+              <div class="skill">
+                <span class="skill-dot"></span>
+                <span>Event Validation</span>
+              </div>
+
+              <div class="skill">
+                <span class="skill-dot"></span>
+                <span>Data Transformation</span>
+              </div>
+
+              <div class="skill">
+                <span class="skill-dot"></span>
+                <span>Git / GitHub</span>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- OPERATIONS -->
+
+          <div class="skill-group">
+
+            <div class="skill-title">
+              Monitoring & IT Operations
+            </div>
+
+            <div class="skill-grid">
+
+              <div class="skill">
+                <span class="skill-dot"></span>
+                <span>Network Monitoring</span>
+              </div>
+
+              <div class="skill">
+                <span class="skill-dot"></span>
+                <span>Incident Troubleshooting</span>
+              </div>
+
+              <div class="skill">
+                <span class="skill-dot"></span>
+                <span>Microsoft 365</span>
+              </div>
+
+              <div class="skill">
+                <span class="skill-dot"></span>
+                <span>IT Operations</span>
+              </div>
+
+              <div class="skill">
+                <span class="skill-dot"></span>
+                <span>Service Management</span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SECURITY FOCUS
+    ====================================================== -->
+
+    <section>
+
+      <div class="wrap">
+
+        <div class="section-head reveal">
+
+          <div class="eyebrow">
+            security-focus --current
+          </div>
+
+          <h2 class="section-title">
+            Cybersecurity Focus
+          </h2>
+
+        </div>
+
+
+        <div class="security-focus reveal">
+
+
+          <div class="focus-card">
+
+            <div class="focus-icon">
+              [01]
+            </div>
+
+            <h3>
+              Network Security
+            </h3>
+
+            <p>
+
+              Firewalls, network segmentation, VLANs, routing,
+              access controls and secure infrastructure.
+
+            </p>
+
+          </div>
+
+
+          <div class="focus-card">
+
+            <div class="focus-icon">
+              [02]
+            </div>
+
+            <h3>
+              Security Operations
+            </h3>
+
+            <p>
+
+              Security monitoring, event analysis, validation,
+              logs and incident troubleshooting concepts.
+
+            </p>
+
+          </div>
+
+
+          <div class="focus-card">
+
+            <div class="focus-icon">
+              [03]
+            </div>
+
+            <h3>
+              Security Engineering
+            </h3>
+
+            <p>
+
+              Security event processing, OCSF normalization,
+              APIs and validation pipelines.
+
+            </p>
+
+          </div>
+
+
+          <div class="focus-card">
+
+            <div class="focus-icon">
+              [04]
+            </div>
+
+            <h3>
+              Automation
+            </h3>
+
+            <p>
+
+              Python-based automation and API-driven workflows
+              for security and infrastructure operations.
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CREDENTIALS
+    ====================================================== -->
+
+    <section id="credentials">
+
+      <div class="wrap">
+
+        <div class="section-head reveal">
+
+          <div class="eyebrow">
+            cat credentials.txt
+          </div>
+
+          <h2 class="section-title">
+            Certifications & Education
+          </h2>
+
+        </div>
+
+
+        <div class="credential-grid reveal">
+
+
+          <div>
+
+            <div class="skill-title">
+              Training & Certifications
+            </div>
+
+            <ul class="credential-list">
+
+              <li>
+
+                <div class="credential-name">
+                  CISSP Training / Preparation
+                </div>
+
+                <div class="credential-note">
+                  CyberFrat
+                </div>
+
+              </li>
+
+
+              <li>
+
+                <div class="credential-name">
+                  NSE4 Firewall Training
+                </div>
+
+                <div class="credential-note">
+                  Fortinet-focused training
+                </div>
+
+              </li>
+
+
+              <li>
+
+                <div class="credential-name">
+                  Cybersecurity Training
+                </div>
+
+                <div class="credential-note">
+                  Tech Mahindra Foundation
+                </div>
+
+              </li>
+
+            </ul>
+
+          </div>
+
+
+          <div>
+
+            <div class="skill-title">
+              Education
+            </div>
+
+            <ul class="credential-list">
+
+              <li>
+
+                <div class="credential-name">
+                  B.Sc. in IT Management
+                </div>
+
+                <div class="credential-note">
+                  Utkal University · 2017 — 2020
+                </div>
+
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CAREER DIRECTION
+    ====================================================== -->
+
+    <section>
+
+      <div class="wrap">
+
+        <div class="direction-card reveal">
+
+          <div class="eyebrow">
+            cat career-direction.conf
+          </div>
+
+          <h3>
+            Moving from infrastructure to cybersecurity.
+          </h3>
+
+          <p>
+
+            My goal is to build on my network and infrastructure background
+            and progress into cybersecurity-focused roles where I can work
+            with network security, security operations, SIEM technologies,
+            threat detection, security engineering and automation.
+
+          </p>
+
+
+          <div class="direction-tags">
+
+            <span class="direction-tag">
+              NETWORK SECURITY
+            </span>
+
+            <span class="direction-tag">
+              SOC
+            </span>
+
+            <span class="direction-tag">
+              SIEM
+            </span>
+
+            <span class="direction-tag">
+              SECURITY OPERATIONS
+            </span>
+
+            <span class="direction-tag">
+              THREAT DETECTION
+            </span>
+
+            <span class="direction-tag">
+              SECURITY ENGINEERING
+            </span>
+
+            <span class="direction-tag">
+              PYTHON AUTOMATION
+            </span>
+
+            <span class="direction-tag">
+              CLOUD SECURITY
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CONTACT
+    ====================================================== -->
+
+    <section id="contact">
+
+      <div class="wrap">
+
+        <div class="reveal">
+
+          <div class="eyebrow">
+            ping pradeep --contact
+          </div>
+
+          <h2 class="section-title">
+            Let's Connect
+          </h2>
+
+          <p>
+
+            Interested in cybersecurity, network security, security
+            operations and security engineering opportunities.
+
+            Feel free to connect and discuss technology, infrastructure
+            security and cybersecurity.
+
+          </p>
+
+
+          <div class="contact-row">
+
+            <a
+              class="btn btn-primary"
+              href="https://www.linkedin.com/in/pradeep-kumar-patra-83824a1b1"
+              target="_blank"
+              rel="noopener"
+            >
+              LinkedIn ↗
+            </a>
+
+
+            <a
+              class="btn btn-ghost"
+              href="mailto:pradeepkumarpatra826@gmail.com"
+            >
+              pradeepkumarpatra826@gmail.com ✎
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =======================================================
+       FOOTER
+  ======================================================== -->
+
+  <footer>
+
     <div class="wrap">
-      <div class="reveal">
-        <div class="eyebrow" style="justify-content:center;">ping pradeep --contact</div>
-        <h2 class="section-title">Let's connect</h2>
-        <p>Open to network &amp; infrastructure engineering roles — reach out below.</p>
-        <div class="contact-row">
-          <a class="btn btn-primary" href="https://www.linkedin.com/in/pradeep-kumar-patra-83824a1b1" target="_blank" rel="noopener">LinkedIn ↗</a>
-          <a class="btn btn-ghost" href="mailto:pradeepkumarpatra826@gmail.com">your.email@example.com ✎</a>
-        </div>
-      </div>
+
+      Pradeep Kumar Patra · Mumbai, India ·
+
+      <span style="color:var(--accent);">
+        Security-focused IT Professional
+      </span>
+
     </div>
-  </section>
 
-</main>
+  </footer>
 
-<footer>Pradeep Kumar Patra — Mumbai, India</footer>
 
-<script>
-  // mobile nav toggle
-  const toggle = document.getElementById('navToggle');
-  const links = document.getElementById('navLinks');
-  toggle.addEventListener('click', () => links.classList.toggle('open'));
-  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+  <!-- =======================================================
+       JAVASCRIPT
+  ======================================================== -->
 
-  // scroll reveal
-  const revealEls = document.querySelectorAll('.reveal');
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold:0.15 });
-  revealEls.forEach(el => io.observe(el));
+  <script>
 
-  // nav active state
-  const navA = document.querySelectorAll('[data-nav]');
-  const sections = [...navA].map(a => document.querySelector(a.getAttribute('href')));
-  const spy = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      const id = '#' + e.target.id;
-      const link = document.querySelector('[data-nav][href="'+id+'"]');
-      if(link){ link.classList.toggle('active', e.isIntersecting); }
+    /* =========================================================
+       MOBILE NAVIGATION
+    ========================================================= */
+
+    const navToggle =
+      document.getElementById("navToggle");
+
+    const navLinks =
+      document.getElementById("navLinks");
+
+
+    navToggle.addEventListener("click", () => {
+
+      navLinks.classList.toggle("open");
+
     });
-  }, { rootMargin:'-40% 0px -55% 0px' });
-  sections.forEach(s => s && spy.observe(s));
-</script>
+
+
+    navLinks
+      .querySelectorAll("a")
+      .forEach(link => {
+
+        link.addEventListener("click", () => {
+
+          navLinks.classList.remove("open");
+
+        });
+
+      });
+
+
+    /* =========================================================
+       SCROLL REVEAL
+    ========================================================= */
+
+    const revealElements =
+      document.querySelectorAll(".reveal");
+
+
+    const revealObserver =
+      new IntersectionObserver(
+
+        entries => {
+
+          entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add("in");
+
+              revealObserver.unobserve(
+                entry.target
+              );
+
+            }
+
+          });
+
+        },
+
+        {
+          threshold: 0.12
+        }
+
+      );
+
+
+    revealElements.forEach(element => {
+
+      revealObserver.observe(element);
+
+    });
+
+
+    /* =========================================================
+       ACTIVE NAVIGATION
+    ========================================================= */
+
+    const navItems =
+      document.querySelectorAll("[data-nav]");
+
+
+    const observedSections = [];
+
+
+    navItems.forEach(link => {
+
+      const section =
+        document.querySelector(
+          link.getAttribute("href")
+        );
+
+      if (section) {
+
+        observedSections.push(section);
+
+      }
+
+    });
+
+
+    const navigationObserver =
+      new IntersectionObserver(
+
+        entries => {
+
+          entries.forEach(entry => {
+
+            if (!entry.isIntersecting) {
+              return;
+            }
+
+
+            navItems.forEach(link => {
+
+              link.classList.remove("active");
+
+            });
+
+
+            const activeLink =
+              document.querySelector(
+                `[data-nav][href="#${entry.target.id}"]`
+              );
+
+
+            if (activeLink) {
+
+              activeLink.classList.add("active");
+
+            }
+
+          });
+
+        },
+
+        {
+          rootMargin:
+            "-35% 0px -55% 0px"
+        }
+
+      );
+
+
+    observedSections.forEach(section => {
+
+      navigationObserver.observe(section);
+
+    });
+
+
+    /* =========================================================
+       TERMINAL TYPE EFFECT
+    ========================================================= */
+
+    const terminalCommand =
+      document.querySelector(".terminal-body .command");
+
+
+    if (terminalCommand) {
+
+      const originalText =
+        terminalCommand.textContent.trim();
+
+      terminalCommand.textContent = "";
+
+
+      let index = 0;
+
+
+      const typeCommand = () => {
+
+        if (index < originalText.length) {
+
+          terminalCommand.textContent +=
+            originalText.charAt(index);
+
+          index++;
+
+          setTimeout(typeCommand, 55);
+
+        }
+
+      };
+
+
+      setTimeout(typeCommand, 700);
+
+    }
+
+
+    /* =========================================================
+       CURRENT YEAR / CONSOLE MESSAGE
+    ========================================================= */
+
+    console.log(
+      "%c[SECURITY]",
+      "color:#35e0c2;font-weight:bold;",
+      "Portfolio initialized."
+    );
+
+    console.log(
+      "%c[CAREER]",
+      "color:#67a9ff;font-weight:bold;",
+      "Infrastructure → Network Security → Cybersecurity"
+    );
+
+  </script>
 
 </body>
 </html>
