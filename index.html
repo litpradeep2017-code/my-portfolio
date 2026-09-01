@@ -1,15 +1,25 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Pradeep Kumar Patra — Cybersecurity & Network Security</title>
+  <title>Pradeep Kumar Patra | System Administrator · Network Security · Cybersecurity</title>
 
-  <meta
-    name="description"
-    content="Pradeep Kumar Patra — IT System Administrator with experience in networking, firewall security, infrastructure, Microsoft 365 and cybersecurity engineering."
-  />
+<meta
+name="description"
+content="Pradeep Kumar Patra — IT System Administrator and Network Security professional with 5+ years of experience in networking, firewalls, Microsoft 365, infrastructure, cybersecurity and security automation."
+
+>
+
+<meta
+name="keywords"
+content="Pradeep Kumar Patra, System Administrator, Network Engineer, Network Security, Cybersecurity, FortiGate, Microsoft 365, Cisco, Python, OCSF, Security Operations"
+
+>
+
+  <meta name="author" content="Pradeep Kumar Patra">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -58,6 +68,7 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 80px;
     }
 
     body {
@@ -108,7 +119,6 @@
       top: 0;
       left: 0;
       right: 0;
-
       z-index: 100;
 
       background: rgba(7, 11, 18, 0.88);
@@ -138,12 +148,12 @@
 
     .nav-links {
       display: flex;
-      gap: 25px;
+      gap: 20px;
     }
 
     .nav-links a {
       font-family: var(--font-mono);
-      font-size: 12px;
+      font-size: 11px;
 
       color: var(--text-muted);
 
@@ -244,7 +254,7 @@
 
       font-family: var(--font-display);
 
-      font-size: 20px;
+      font-size: 19px;
 
       font-weight: 600;
 
@@ -252,7 +262,7 @@
     }
 
     .tagline {
-      max-width: 60ch;
+      max-width: 62ch;
 
       color: var(--text-muted);
 
@@ -266,11 +276,11 @@
     }
 
     /* =========================================================
-       TERMINAL STATUS
+       STATUS
     ========================================================= */
 
     .status-box {
-      max-width: 470px;
+      max-width: 500px;
 
       background: var(--bg-surface);
 
@@ -345,14 +355,12 @@
     }
 
     /* =========================================================
-       CTA
+       BUTTONS
     ========================================================= */
 
     .cta-row {
       display: flex;
-
       flex-wrap: wrap;
-
       gap: 12px;
     }
 
@@ -402,7 +410,7 @@
     }
 
     /* =========================================================
-       SECURITY TERMINAL VISUAL
+       SECURITY TERMINAL
     ========================================================= */
 
     .security-terminal {
@@ -461,7 +469,6 @@
 
     .terminal-line {
       display: flex;
-
       gap: 10px;
     }
 
@@ -475,7 +482,6 @@
 
     .output {
       color: var(--text-muted);
-
       padding-left: 22px;
     }
 
@@ -497,7 +503,6 @@
 
     section {
       padding: 95px 0;
-
       border-top: 1px solid var(--border-soft);
     }
 
@@ -516,7 +521,7 @@
     .section-subtitle {
       color: var(--text-muted);
 
-      max-width: 65ch;
+      max-width: 70ch;
 
       margin-top: 10px;
 
@@ -525,7 +530,6 @@
 
     .reveal {
       opacity: 0;
-
       transform: translateY(20px);
 
       transition:
@@ -535,7 +539,6 @@
 
     .reveal.in {
       opacity: 1;
-
       transform: translateY(0);
     }
 
@@ -581,9 +584,7 @@
 
     .path {
       display: flex;
-
       flex-direction: column;
-
       gap: 8px;
     }
 
@@ -625,7 +626,6 @@
 
     .experience-log {
       display: flex;
-
       flex-direction: column;
     }
 
@@ -678,11 +678,55 @@
 
       font-size: 14px;
 
-      max-width: 70ch;
+      max-width: 72ch;
     }
 
     /* =========================================================
-       CYBERSECURITY PROJECT
+       ACHIEVEMENT STRIP
+    ========================================================= */
+
+    .stats-grid {
+      display: grid;
+
+      grid-template-columns: repeat(4, 1fr);
+
+      gap: 12px;
+    }
+
+    .stat-card {
+      padding: 22px;
+
+      background: var(--bg-surface);
+
+      border: 1px solid var(--border);
+
+      border-radius: 8px;
+    }
+
+    .stat-number {
+      color: var(--accent);
+
+      font-family: var(--font-display);
+
+      font-size: 28px;
+
+      font-weight: 700;
+
+      margin-bottom: 4px;
+    }
+
+    .stat-label {
+      color: var(--text-muted);
+
+      font-family: var(--font-mono);
+
+      font-size: 10px;
+
+      line-height: 1.6;
+    }
+
+    /* =========================================================
+       PROJECTS
     ========================================================= */
 
     .project-card {
@@ -788,7 +832,7 @@
     }
 
     /* =========================================================
-       SECURITY PIPELINE
+       PIPELINE
     ========================================================= */
 
     .pipeline {
@@ -996,6 +1040,63 @@
     }
 
     /* =========================================================
+       CORE COMPETENCIES
+    ========================================================= */
+
+    .competency-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 12px;
+    }
+
+    .competency-card {
+      padding: 22px;
+
+      background: var(--bg-surface);
+
+      border: 1px solid var(--border);
+
+      border-radius: 8px;
+
+      transition:
+        transform 0.2s,
+        border-color 0.2s;
+    }
+
+    .competency-card:hover {
+      transform: translateY(-3px);
+
+      border-color: var(--accent-dim);
+    }
+
+    .competency-number {
+      color: var(--accent);
+
+      font-family: var(--font-mono);
+
+      font-size: 11px;
+
+      margin-bottom: 10px;
+    }
+
+    .competency-card h3 {
+      font-family: var(--font-display);
+
+      font-size: 16px;
+
+      margin-bottom: 8px;
+    }
+
+    .competency-card p {
+      color: var(--text-muted);
+
+      font-size: 12px;
+    }
+
+    /* =========================================================
        SECURITY FOCUS
     ========================================================= */
 
@@ -1043,6 +1144,64 @@
     }
 
     /* =========================================================
+       EDUCATION TIMELINE
+    ========================================================= */
+
+    .education-container {
+      max-width: 850px;
+    }
+
+    .education-item {
+      display: grid;
+
+      grid-template-columns: 150px 1fr;
+
+      gap: 30px;
+
+      padding: 25px 0;
+
+      border-top: 1px dashed var(--border-soft);
+    }
+
+    .education-item:first-child {
+      border-top: none;
+    }
+
+    .education-year {
+      color: var(--warning);
+
+      font-family: var(--font-mono);
+
+      font-size: 11px;
+    }
+
+    .education-degree {
+      font-family: var(--font-display);
+
+      font-size: 19px;
+
+      font-weight: 600;
+
+      margin-bottom: 5px;
+    }
+
+    .education-institute {
+      color: var(--accent);
+
+      font-family: var(--font-mono);
+
+      font-size: 11px;
+
+      margin-bottom: 7px;
+    }
+
+    .education-description {
+      color: var(--text-muted);
+
+      font-size: 13px;
+    }
+
+    /* =========================================================
        CREDENTIALS
     ========================================================= */
 
@@ -1078,6 +1237,74 @@
       font-size: 10px;
 
       margin-top: 3px;
+    }
+
+    .credential-status {
+      display: inline-block;
+
+      margin-top: 6px;
+
+      padding: 3px 7px;
+
+      border-radius: 4px;
+
+      background: rgba(53, 224, 194, 0.06);
+
+      border: 1px solid var(--border);
+
+      color: var(--accent);
+
+      font-family: var(--font-mono);
+
+      font-size: 9px;
+    }
+
+    /* =========================================================
+       TOOLS
+    ========================================================= */
+
+    .tools-box {
+      padding: 28px;
+
+      background: var(--bg-surface);
+
+      border: 1px solid var(--border);
+
+      border-radius: 10px;
+    }
+
+    .tools-list {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 9px;
+    }
+
+    .tool-tag {
+      padding: 8px 12px;
+
+      background: var(--bg-raised);
+
+      border: 1px solid var(--border);
+
+      border-radius: 5px;
+
+      color: var(--text-muted);
+
+      font-family: var(--font-mono);
+
+      font-size: 10px;
+
+      transition:
+        color 0.2s,
+        border-color 0.2s;
+    }
+
+    .tool-tag:hover {
+      color: var(--accent);
+
+      border-color: var(--accent-dim);
     }
 
     /* =========================================================
@@ -1160,7 +1387,7 @@
     }
 
     #contact p {
-      max-width: 600px;
+      max-width: 650px;
 
       margin: 0 auto 30px;
 
@@ -1200,6 +1427,26 @@
     /* =========================================================
        RESPONSIVE
     ========================================================= */
+
+    @media (max-width: 1000px) {
+
+      .nav-links {
+        gap: 13px;
+      }
+
+      .nav-links a {
+        font-size: 10px;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .competency-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+    }
 
     @media (max-width: 900px) {
 
@@ -1241,7 +1488,8 @@
 
       .about-grid,
       .project-grid,
-      .secondary-project {
+      .secondary-project,
+      .credential-grid {
         grid-template-columns: 1fr;
       }
 
@@ -1249,9 +1497,6 @@
         grid-template-columns: 1fr 1fr;
       }
 
-      .credential-grid {
-        grid-template-columns: 1fr;
-      }
     }
 
     @media (max-width: 600px) {
@@ -1268,7 +1513,8 @@
         padding: 125px 0 75px;
       }
 
-      .experience-entry {
+      .experience-entry,
+      .education-item {
         grid-template-columns: 1fr;
 
         gap: 7px;
@@ -1278,7 +1524,9 @@
         grid-template-columns: 1fr;
       }
 
-      .security-focus {
+      .security-focus,
+      .stats-grid,
+      .competency-grid {
         grid-template-columns: 1fr;
       }
 
@@ -1294,6 +1542,12 @@
         padding-left: 20px;
         padding-right: 20px;
       }
+
+      .project-card,
+      .direction-card {
+        padding: 24px;
+      }
+
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -1305,9 +1559,11 @@
         transition: none !important;
         scroll-behavior: auto !important;
       }
+
     }
 
   </style>
+
 </head>
 
 <body>
@@ -1318,313 +1574,1405 @@
 
   <header>
 
-    <nav class="wrap">
+```
+<nav class="wrap">
 
-      <div class="brand">
-        pradeep<span class="prompt">@</span>security<span class="prompt">:~$</span>
+  <div class="brand">
+    pradeep<span class="prompt">@</span>security<span class="prompt">:~$</span>
+  </div>
+
+  <button
+    class="nav-toggle"
+    id="navToggle"
+    aria-label="Toggle navigation"
+  >
+    ☰
+  </button>
+
+  <ul class="nav-links" id="navLinks">
+
+    <li><a href="#about" data-nav>--about</a></li>
+    <li><a href="#experience" data-nav>--experience</a></li>
+    <li><a href="#projects" data-nav>--projects</a></li>
+    <li><a href="#skills" data-nav>--skills</a></li>
+    <li><a href="#education" data-nav>--education</a></li>
+    <li><a href="#credentials" data-nav>--certs</a></li>
+    <li><a href="#contact" data-nav>--contact</a></li>
+
+  </ul>
+
+</nav>
+```
+
+  </header>
+
+  <main>
+
+```
+<!-- =====================================================
+     HERO
+====================================================== -->
+
+<section id="home">
+
+  <div class="wrap hero-grid">
+
+    <div>
+
+      <div class="eyebrow">
+        whoami
       </div>
 
-      <button
-        class="nav-toggle"
-        id="navToggle"
-        aria-label="Toggle navigation"
-      >
-        ☰
-      </button>
+      <h1 class="name">
+        Pradeep Kumar Patra
+      </h1>
 
-      <ul class="nav-links" id="navLinks">
+      <div class="role">
+        IT System Administrator · Network Security · Cybersecurity
+      </div>
+
+      <p class="tagline">
+
+        IT infrastructure and network professional with
+        <span class="highlight">5+ years of experience</span>
+        across system administration, networking, enterprise
+        infrastructure and security operations.
+
+        Currently building deeper expertise in
+        <span class="highlight">
+          network security, cybersecurity engineering,
+          security operations and automation
+        </span>.
+
+      </p>
+
+
+      <!-- STATUS -->
+
+      <div class="status-box">
+
+        <div class="terminal-header">
+
+          <span class="terminal-dot"></span>
+          <span class="terminal-dot"></span>
+          <span class="terminal-dot"></span>
+
+          <span class="terminal-title">
+            /var/log/pradeep/status
+          </span>
+
+        </div>
+
+
+        <div class="status-row">
+
+          <span class="status-label">
+            STATUS
+          </span>
+
+          <span class="status-value ok">
+            ● OPERATIONAL
+          </span>
+
+        </div>
+
+
+        <div class="status-row">
+
+          <span class="status-label">
+            CURRENT_ROLE
+          </span>
+
+          <span class="status-value">
+            IT System Administrator
+          </span>
+
+        </div>
+
+
+        <div class="status-row">
+
+          <span class="status-label">
+            LOCATION
+          </span>
+
+          <span class="status-value">
+            Mumbai, India
+          </span>
+
+        </div>
+
+
+        <div class="status-row">
+
+          <span class="status-label">
+            EXPERIENCE
+          </span>
+
+          <span class="status-value">
+            5+ years
+          </span>
+
+        </div>
+
+
+        <div class="status-row">
+
+          <span class="status-label">
+            CORE_STACK
+          </span>
+
+          <span class="status-value">
+            FortiGate · Cisco · M365 · Python
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="cta-row">
+
+        <a
+          class="btn btn-primary"
+          href="https://www.linkedin.com/in/pradeep-kumar-patra-83824a1b1"
+          target="_blank"
+          rel="noopener"
+        >
+          LinkedIn ↗
+        </a>
+
+        <a
+          class="btn btn-ghost"
+          href="https://github.com/YOUR_GITHUB_USERNAME"
+          target="_blank"
+          rel="noopener"
+        >
+          GitHub ↗
+        </a>
+
+        <a
+          class="btn btn-ghost"
+          href="YOUR_RESUME_URL"
+          target="_blank"
+          rel="noopener"
+        >
+          Resume ↓
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- SECURITY TERMINAL -->
+
+    <div class="security-terminal">
+
+      <div class="terminal-top">
+
+        <span></span>
+        <span></span>
+        <span class="active"></span>
+
+      </div>
+
+
+      <div class="terminal-body">
+
+        <div class="terminal-line">
+
+          <span class="prompt">$</span>
+
+          <span class="command">
+            security-status
+          </span>
+
+        </div>
+
+
+        <div class="output">
+          [network]
+          <span class="green">ONLINE</span>
+        </div>
+
+        <div class="output">
+          [firewall]
+          <span class="green">PROTECTED</span>
+        </div>
+
+        <div class="output">
+          [identity]
+          <span class="green">MONITORED</span>
+        </div>
+
+        <div class="output">
+          [events]
+          <span class="blue">NORMALIZED</span>
+        </div>
+
+        <div class="output">
+          [validation]
+          <span class="green">ACTIVE</span>
+        </div>
+
+        <br>
+
+
+        <div class="terminal-line">
+
+          <span class="prompt">$</span>
+
+          <span class="command">
+            career --target
+          </span>
+
+        </div>
+
+
+        <div class="output">
+          → Network Security
+        </div>
+
+        <div class="output">
+          → Security Operations
+        </div>
+
+        <div class="output">
+          → Cybersecurity Engineering
+        </div>
+
+        <div class="output">
+          → Security Automation
+        </div>
+
+        <br>
+
+
+        <div class="terminal-line">
+
+          <span class="prompt">$</span>
+
+          <span class="command">
+            echo $MISSION
+          </span>
+
+        </div>
+
+
+        <div class="output yellow">
+
+          Secure infrastructure.<br>
+          Detect threats.<br>
+          Automate defense.
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     ABOUT
+====================================================== -->
+
+<section id="about">
+
+  <div class="wrap">
+
+    <div class="section-head reveal">
+
+      <div class="eyebrow">
+        whoami --verbose
+      </div>
+
+      <h2 class="section-title">
+        About Me
+      </h2>
+
+      <p class="section-subtitle">
+        Infrastructure experience with a growing focus on
+        cybersecurity and security engineering.
+      </p>
+
+    </div>
+
+
+    <div class="about-grid">
+
+      <div class="about-text reveal">
+
+        <p>
+
+          I am an
+          <span class="highlight">
+            IT System Administrator
+          </span>
+          with more than five years of professional experience
+          across IT support, networking, infrastructure and
+          enterprise operations.
+
+        </p>
+
+
+        <p>
+
+          My infrastructure foundation includes
+          <span class="highlight">
+            network troubleshooting, switching, VLANs,
+            routing, firewalls, Windows Server, Active Directory
+            and Microsoft 365
+          </span>.
+
+        </p>
+
+
+        <p>
+
+          My current technical direction is cybersecurity.
+          I am expanding my capabilities across
+          <span class="highlight">
+            network security, security operations,
+            security event processing, Python automation,
+            APIs and security engineering
+          </span>.
+
+        </p>
+
+
+        <p>
+
+          I believe effective cybersecurity starts with
+          understanding the infrastructure being protected:
+          networks, identities, endpoints, firewalls,
+          applications and security telemetry.
+
+        </p>
+
+      </div>
+
+
+      <div class="career-path reveal">
+
+        <div class="career-label">
+          /etc/career/path.conf
+        </div>
+
+        <div class="path">
+
+          <div class="path-item">
+            IT SUPPORT
+          </div>
+
+          <div class="path-arrow">
+            ↓
+          </div>
+
+          <div class="path-item">
+            NETWORK & INFRASTRUCTURE
+          </div>
+
+          <div class="path-arrow">
+            ↓
+          </div>
+
+          <div class="path-item current">
+            NETWORK SECURITY
+          </div>
+
+          <div class="path-arrow">
+            ↓
+          </div>
+
+          <div class="path-item">
+            SECURITY OPERATIONS
+          </div>
+
+          <div class="path-arrow">
+            ↓
+          </div>
+
+          <div class="path-item">
+            SECURITY ENGINEERING
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     PROFESSIONAL HIGHLIGHTS
+====================================================== -->
+
+<section>
+
+  <div class="wrap">
+
+    <div class="section-head reveal">
+
+      <div class="eyebrow">
+        cat professional.highlights
+      </div>
+
+      <h2 class="section-title">
+        Professional Snapshot
+      </h2>
+
+    </div>
+
+
+    <div class="stats-grid reveal">
+
+      <div class="stat-card">
+
+        <div class="stat-number">
+          5+
+        </div>
+
+        <div class="stat-label">
+          YEARS OF IT / INFRASTRUCTURE EXPERIENCE
+        </div>
+
+      </div>
+
+
+      <div class="stat-card">
+
+        <div class="stat-number">
+          3
+        </div>
+
+        <div class="stat-label">
+          CORE DOMAINS: IT · NETWORK · SECURITY
+        </div>
+
+      </div>
+
+
+      <div class="stat-card">
+
+        <div class="stat-number">
+          10+
+        </div>
+
+        <div class="stat-label">
+          SECURITY & INFRASTRUCTURE TECHNOLOGIES
+        </div>
+
+      </div>
+
+
+      <div class="stat-card">
+
+        <div class="stat-number">
+          01
+        </div>
+
+        <div class="stat-label">
+          SECURITY ENGINEERING PROJECT
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     EXPERIENCE
+====================================================== -->
+
+<section id="experience">
+
+  <div class="wrap">
+
+    <div class="section-head reveal">
+
+      <div class="eyebrow">
+        cat career.log
+      </div>
+
+      <h2 class="section-title">
+        Professional Experience
+      </h2>
+
+    </div>
+
+
+    <div class="experience-log reveal">
+
+
+      <div class="experience-entry">
+
+        <div class="experience-date">
+          2026 — PRESENT
+        </div>
+
+        <div>
+
+          <div class="experience-role">
+            IT System Administrator
+          </div>
+
+          <div class="experience-company">
+            Digimaze Marketing Pvt. Ltd. · Mumbai
+          </div>
+
+          <div class="experience-description">
+
+            Managing enterprise IT infrastructure with focus on
+            networking, firewall operations, Microsoft 365,
+            infrastructure troubleshooting and security controls.
+
+            Contributing to security-focused engineering work
+            involving event normalization, validation,
+            re-validation and API-based processing.
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="experience-entry">
+
+        <div class="experience-date">
+          2025 — 2026
+        </div>
+
+        <div>
+
+          <div class="experience-role">
+            IT Associate Consultant
+          </div>
+
+          <div class="experience-company">
+            Litmus Information System LLP · Gujarat
+          </div>
+
+          <div class="experience-description">
+
+            Worked across enterprise infrastructure, networking,
+            troubleshooting and client IT environments while
+            developing hands-on experience with network and
+            security technologies.
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="experience-entry">
+
+        <div class="experience-date">
+          2021 — 2025
+        </div>
+
+        <div>
+
+          <div class="experience-role">
+            Desktop Support Engineer
+          </div>
+
+          <div class="experience-company">
+            TeamLease Digital Pvt. Ltd. · Odisha
+          </div>
+
+          <div class="experience-description">
+
+            Provided enterprise desktop, hardware, software and
+            networking support while building a strong operational
+            troubleshooting foundation that later expanded into
+            infrastructure and network administration.
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     PROJECTS
+====================================================== -->
+
+<section id="projects">
+
+  <div class="wrap">
+
+    <div class="section-head reveal">
+
+      <div class="eyebrow">
+        ls /projects/security
+      </div>
+
+      <h2 class="section-title">
+        Cybersecurity Projects
+      </h2>
+
+      <p class="section-subtitle">
+
+        Practical engineering work connecting security operations,
+        event processing, networking and automation.
+
+      </p>
+
+    </div>
+
+
+    <!-- PRIMARY PROJECT -->
+
+    <div class="project-card reveal">
+
+      <div class="project-grid">
+
+
+        <div>
+
+          <div class="project-label">
+            PRIMARY PROJECT · SECURITY ENGINEERING
+          </div>
+
+          <h3 class="project-title">
+            OCSF Security Event Normalization & Validation
+          </h3>
+
+          <div class="project-stack">
+            Python · FastAPI · OCSF · JSON · REST API · Pytest · Git
+          </div>
+
+
+          <p class="project-description">
+
+            Contributing to a security-event processing platform
+            that transforms heterogeneous security telemetry into
+            a standardized OCSF-compatible structure.
+
+            The implementation covers field transformation,
+            data-type conversion, enumeration mapping,
+            validation, re-validation and deterministic
+            delta reporting.
+
+          </p>
+
+
+          <div class="project-features">
+
+            <div class="project-feature">
+              Schema Detection
+            </div>
+
+            <div class="project-feature">
+              Field Transformation
+            </div>
+
+            <div class="project-feature">
+              Data Type Conversion
+            </div>
+
+            <div class="project-feature">
+              Enumeration Mapping
+            </div>
+
+            <div class="project-feature">
+              OCSF Normalization
+            </div>
+
+            <div class="project-feature">
+              Event Validation
+            </div>
+
+            <div class="project-feature">
+              Re-Validation API
+            </div>
+
+            <div class="project-feature">
+              Delta Engine Testing
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="pipeline">
+
+          <div class="pipeline-item">
+
+            <div class="pipeline-number">
+              01
+            </div>
+
+            <span>
+              Security Event
+            </span>
+
+          </div>
+
+
+          <div class="pipeline-arrow">
+            ↓
+          </div>
+
+
+          <div class="pipeline-item">
+
+            <div class="pipeline-number">
+              02
+            </div>
+
+            <span>
+              Schema Detection
+            </span>
+
+          </div>
+
+
+          <div class="pipeline-arrow">
+            ↓
+          </div>
+
+
+          <div class="pipeline-item">
+
+            <div class="pipeline-number">
+              03
+            </div>
+
+            <span>
+              Field Transformation
+            </span>
+
+          </div>
+
+
+          <div class="pipeline-arrow">
+            ↓
+          </div>
+
+
+          <div class="pipeline-item">
+
+            <div class="pipeline-number">
+              04
+            </div>
+
+            <span>
+              OCSF Normalization
+            </span>
+
+          </div>
+
+
+          <div class="pipeline-arrow">
+            ↓
+          </div>
+
+
+          <div class="pipeline-item">
+
+            <div class="pipeline-number">
+              05
+            </div>
+
+            <span>
+              Validation
+            </span>
+
+          </div>
+
+
+          <div class="pipeline-arrow">
+            ↓
+          </div>
+
+
+          <div class="pipeline-item">
+
+            <div class="pipeline-number">
+              06
+            </div>
+
+            <span>
+              Re-Validation
+            </span>
+
+          </div>
+
+
+          <div class="pipeline-arrow">
+            ↓
+          </div>
+
+
+          <div class="pipeline-item">
+
+            <div class="pipeline-number">
+              07
+            </div>
+
+            <span>
+              Delta Reporting
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- INFRASTRUCTURE PROJECT -->
+
+    <div class="secondary-project reveal">
+
+      <div>
+
+        <div class="project-label">
+          INFRASTRUCTURE · NETWORK SECURITY
+        </div>
+
+        <h3>
+          Greenfield IT Infrastructure Deployment
+        </h3>
+
+        <div class="client">
+          Jesons Industries
+        </div>
+
+        <p>
+
+          Contributed to a greenfield infrastructure deployment
+          involving network, server-room and physical security
+          systems for a manufacturing environment.
+
+        </p>
+
+      </div>
+
+
+      <ul class="project-list">
 
         <li>
-          <a href="#about" data-nav>--about</a>
+          Network and server rack deployment
         </li>
 
         <li>
-          <a href="#experience" data-nav>--experience</a>
+          Active Directory infrastructure
         </li>
 
         <li>
-          <a href="#projects" data-nav>--projects</a>
+          Network connectivity and switching
         </li>
 
         <li>
-          <a href="#skills" data-nav>--skills</a>
+          CCTV integration
         </li>
 
         <li>
-          <a href="#credentials" data-nav>--credentials</a>
+          Access control systems
         </li>
 
         <li>
-          <a href="#contact" data-nav>--contact</a>
+          Site infrastructure troubleshooting
         </li>
 
       </ul>
 
-    </nav>
+    </div>
 
-  </header>
+  </div>
+
+</section>
 
 
-  <main>
+<!-- =====================================================
+     SKILLS
+====================================================== -->
+
+<section id="skills">
+
+  <div class="wrap">
+
+    <div class="section-head reveal">
+
+      <div class="eyebrow">
+        show security-stack
+      </div>
+
+      <h2 class="section-title">
+        Technical Skills
+      </h2>
+
+      <p class="section-subtitle">
+
+        A combination of infrastructure fundamentals,
+        network engineering, security technologies and
+        security-focused development.
+
+      </p>
+
+    </div>
 
 
-    <!-- =====================================================
-         HERO
-    ====================================================== -->
+    <div class="reveal">
 
-    <section id="home">
 
-      <div class="wrap hero-grid">
+      <!-- NETWORKING -->
+
+      <div class="skill-group">
+
+        <div class="skill-title">
+          Network Engineering
+        </div>
+
+        <div class="skill-grid">
+
+          <div class="skill"><span class="skill-dot"></span><span>TCP/IP</span></div>
+          <div class="skill"><span class="skill-dot"></span><span>Routing & Switching</span></div>
+          <div class="skill"><span class="skill-dot"></span><span>VLAN / Trunking</span></div>
+          <div class="skill"><span class="skill-dot"></span><span>STP</span></div>
+          <div class="skill"><span class="skill-dot"></span><span>DHCP</span></div>
+          <div class="skill"><span class="skill-dot"></span><span>DNS</span></div>
+          <div class="skill"><span class="skill-dot"></span><span>OSPF</span></div>
+          <div class="skill"><span class="skill-dot"></span><span>BGP</span></div>
+          <div class="skill"><span class="skill-dot"></span><span>VPN</span></div>
+          <div class="skill"><span class="skill-dot"></span><span>Cisco Switching</span></div>
+          <div class="skill"><span class="skill-dot"></span><span>Network Troubleshooting</span></div>
+          <div class="skill"><span class="skill-dot"></span><span>SNMP</span></div>
+
+        </div>
+
+      </div>
+
+
+      <!-- SECURITY -->
+
+      <div class="skill-group">
+
+        <div class="skill-title">
+          Network Security & Firewalls
+        </div>
+
+        <div class="skill-grid">
+
+          <div class="skill"><span class="skill-dot"></span><span>FortiGate Firewall</span></div>
+          <div class="skill"><span class="skill-dot"></span><span>Firewall Policies</span></div>
+          <div class="skill"><span class="skill-dot"></span><span>NAT</span></div>
+          <div class="skill"><span class="skill-dot"></span><span>IPsec VPN</span></div>
+          <div class="skill"><span class="skill-dot"></span><span>SSL VPN</span></div>
+          <div class="skill"><span class="skill-dot"></span><span>Network Segmentation</span></div>
+          <div class="skill"><span class="skill-dot"></span><span>Access Control</span></div>
+          <div class="skill"><span class="skill-dot"></span><span>Local-In Policies</span></div>
+          <div class="skill"><span class="skill-dot"></span><span>Security Monitoring</span></div>
+          <div class="skill"><span class="skill-dot"></span><span>Firewall Troubleshooting</span></div>
+
+        </div>
+
+      </div>
+
+
+      <!-- MICROSOFT -->
+
+      <div class="skill-group">
+
+        <div class="skill-title">
+          Microsoft & Infrastructure
+        </div>
+
+        <div class="skill-grid">
+
+          <div class="skill"><span class="skill-dot"></span><span>Microsoft 365</span></div>
+          <div class="skill"><span class="skill-dot"></span><span>Exchange Online</span></div>
+          <div class="skill"><span class="skill-dot"></span><span>Active Directory</span></div>
+          <div class="skill"><span class="skill-dot"></span><span>Windows Server</span></div>
+          <div class="skill"><span class="skill-dot"></span><span>Microsoft Defender</span></div>
+          <div class="skill"><span class="skill-dot"></span><span>Conditional Access</span></div>
+          <div class="skill"><span class="skill-dot"></span><span>Endpoint Management</span></div>
+          <div class="skill"><span class="skill-dot"></span><span>Email Security</span></div>
+
+        </div>
+
+      </div>
+
+
+      <!-- CYBERSECURITY -->
+
+      <div class="skill-group">
+
+        <div class="skill-title">
+          Cybersecurity
+        </div>
+
+        <div class="skill-grid">
+
+          <div class="skill"><span class="skill-dot"></span><span>Security Operations</span></div>
+          <div class="skill"><span class="skill-dot"></span><span>SIEM Concepts</span></div>
+          <div class="skill"><span class="skill-dot"></span><span>Security Event Analysis</span></div>
+          <div class="skill"><span class="skill-dot"></span><span>Log Analysis</span></div>
+          <div class="skill"><span class="skill-dot"></span><span>OCSF</span></div>
+          <div class="skill"><span class="skill-dot"></span><span>Event Normalization</span></div>
+          <div class="skill"><span class="skill-dot"></span><span>Event Validation</span></div>
+          <div class="skill"><span class="skill-dot"></span><span>Threat Detection Concepts</span></div>
+
+        </div>
+
+      </div>
+
+
+      <!-- DEVELOPMENT -->
+
+      <div class="skill-group">
+
+        <div class="skill-title">
+          Security Engineering & Automation
+        </div>
+
+        <div class="skill-grid">
+
+          <div class="skill"><span class="skill-dot"></span><span>Python</span></div>
+          <div class="skill"><span class="skill-dot"></span><span>FastAPI</span></div>
+          <div class="skill"><span class="skill-dot"></span><span>REST APIs</span></div>
+          <div class="skill"><span class="skill-dot"></span><span>JSON</span></div>
+          <div class="skill"><span class="skill-dot"></span><span>Pytest</span></div>
+          <div class="skill"><span class="skill-dot"></span><span>Git</span></div>
+          <div class="skill"><span class="skill-dot"></span><span>GitHub</span></div>
+          <div class="skill"><span class="skill-dot"></span><span>Linux</span></div>
+          <div class="skill"><span class="skill-dot"></span><span>Docker</span></div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     CORE COMPETENCIES
+====================================================== -->
+
+<section id="competencies">
+
+  <div class="wrap">
+
+    <div class="section-head reveal">
+
+      <div class="eyebrow">
+        cat competencies.conf
+      </div>
+
+      <h2 class="section-title">
+        Core Competencies
+      </h2>
+
+      <p class="section-subtitle">
+        Practical capabilities developed through infrastructure,
+        networking and security-focused work.
+      </p>
+
+    </div>
+
+
+    <div class="competency-grid reveal">
+
+
+      <div class="competency-card">
+
+        <div class="competency-number">
+          [01]
+        </div>
+
+        <h3>
+          Infrastructure Administration
+        </h3>
+
+        <p>
+          Enterprise IT infrastructure, systems administration,
+          troubleshooting and operational support.
+        </p>
+
+      </div>
+
+
+      <div class="competency-card">
+
+        <div class="competency-number">
+          [02]
+        </div>
+
+        <h3>
+          Network Administration
+        </h3>
+
+        <p>
+          Switching, VLANs, routing, connectivity,
+          troubleshooting and network monitoring.
+        </p>
+
+      </div>
+
+
+      <div class="competency-card">
+
+        <div class="competency-number">
+          [03]
+        </div>
+
+        <h3>
+          Firewall Administration
+        </h3>
+
+        <p>
+          FortiGate firewall policies, VPN, access controls,
+          security rules and troubleshooting.
+        </p>
+
+      </div>
+
+
+      <div class="competency-card">
+
+        <div class="competency-number">
+          [04]
+        </div>
+
+        <h3>
+          Security Monitoring
+        </h3>
+
+        <p>
+          Security logs, event analysis, validation and
+          security monitoring concepts.
+        </p>
+
+      </div>
+
+
+      <div class="competency-card">
+
+        <div class="competency-number">
+          [05]
+        </div>
+
+        <h3>
+          Automation
+        </h3>
+
+        <p>
+          Python and API-driven automation for infrastructure
+          and security workflows.
+        </p>
+
+      </div>
+
+
+      <div class="competency-card">
+
+        <div class="competency-number">
+          [06]
+        </div>
+
+        <h3>
+          Troubleshooting
+        </h3>
+
+        <p>
+          Structured diagnosis of network, endpoint,
+          Microsoft 365 and infrastructure issues.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     SECURITY FOCUS
+====================================================== -->
+
+<section>
+
+  <div class="wrap">
+
+    <div class="section-head reveal">
+
+      <div class="eyebrow">
+        security-focus --current
+      </div>
+
+      <h2 class="section-title">
+        Cybersecurity Focus
+      </h2>
+
+    </div>
+
+
+    <div class="security-focus reveal">
+
+
+      <div class="focus-card">
+
+        <div class="focus-icon">
+          [01]
+        </div>
+
+        <h3>
+          Network Security
+        </h3>
+
+        <p>
+          Firewalls, network segmentation, VLANs, routing,
+          access controls and secure infrastructure.
+        </p>
+
+      </div>
+
+
+      <div class="focus-card">
+
+        <div class="focus-icon">
+          [02]
+        </div>
+
+        <h3>
+          Security Operations
+        </h3>
+
+        <p>
+          Security monitoring, event analysis, logs,
+          validation and incident troubleshooting concepts.
+        </p>
+
+      </div>
+
+
+      <div class="focus-card">
+
+        <div class="focus-icon">
+          [03]
+        </div>
+
+        <h3>
+          Security Engineering
+        </h3>
+
+        <p>
+          Security event processing, OCSF normalization,
+          APIs and validation pipelines.
+        </p>
+
+      </div>
+
+
+      <div class="focus-card">
+
+        <div class="focus-icon">
+          [04]
+        </div>
+
+        <h3>
+          Automation
+        </h3>
+
+        <p>
+          Python-based automation and API-driven workflows
+          for security and infrastructure operations.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     EDUCATION
+====================================================== -->
+
+<section id="education">
+
+  <div class="wrap">
+
+    <div class="section-head reveal">
+
+      <div class="eyebrow">
+        cat education.log
+      </div>
+
+      <h2 class="section-title">
+        Education
+      </h2>
+
+      <p class="section-subtitle">
+        Academic foundation supporting a career in IT,
+        networking and cybersecurity.
+      </p>
+
+    </div>
+
+
+    <div class="education-container reveal">
+
+
+      <div class="education-item">
+
+        <div class="education-year">
+          2017 — 2020
+        </div>
 
         <div>
 
-          <div class="eyebrow">
-            whoami
+          <div class="education-degree">
+            Bachelor of Science in IT Management
           </div>
 
-          <h1 class="name">
-            Pradeep Kumar Patra
-          </h1>
-
-          <div class="role">
-            IT System Administrator · Network Security · Cybersecurity
+          <div class="education-institute">
+            Kalinga University
           </div>
 
-          <p class="tagline">
-
-            IT infrastructure and network professional building deeper
-            expertise in <span class="highlight">cybersecurity, network
-            security, security operations and security automation</span>.
-
-            Experienced with firewalls, switching, Microsoft environments,
-            infrastructure operations and security-focused engineering.
-
-          </p>
-
-
-          <!-- TERMINAL STATUS -->
-
-          <div class="status-box">
-
-            <div class="terminal-header">
-
-              <span class="terminal-dot"></span>
-              <span class="terminal-dot"></span>
-              <span class="terminal-dot active"></span>
-
-              <span class="terminal-title">
-                /var/log/pradeep/status
-              </span>
-
-            </div>
-
-
-            <div class="status-row">
-
-              <span class="status-label">
-                STATUS
-              </span>
-
-              <span class="status-value ok">
-                ● OPERATIONAL
-              </span>
-
-            </div>
-
-
-            <div class="status-row">
-
-              <span class="status-label">
-                CURRENT_ROLE
-              </span>
-
-              <span class="status-value">
-                IT System Administrator
-              </span>
-
-            </div>
-
-
-            <div class="status-row">
-
-              <span class="status-label">
-                LOCATION
-              </span>
-
-              <span class="status-value">
-                Mumbai, India
-              </span>
-
-            </div>
-
-
-            <div class="status-row">
-
-              <span class="status-label">
-                EXPERIENCE
-              </span>
-
-              <span class="status-value">
-                5+ years
-              </span>
-
-            </div>
-
-
-            <div class="status-row">
-
-              <span class="status-label">
-                SECURITY_STACK
-              </span>
-
-              <span class="status-value">
-                FortiGate · OCSF · Python · APIs
-              </span>
-
-            </div>
-
-          </div>
-
-
-          <div class="cta-row">
-
-            <a
-              class="btn btn-primary"
-              href="https://www.linkedin.com/in/pradeep-kumar-patra-83824a1b1"
-              target="_blank"
-              rel="noopener"
-            >
-              LinkedIn ↗
-            </a>
-
-            <a
-              class="btn btn-ghost"
-              href="#projects"
-            >
-              View Security Work ↓
-            </a>
-
-          </div>
-
-        </div>
-
-
-        <!-- SECURITY TERMINAL -->
-
-        <div class="security-terminal">
-
-          <div class="terminal-top">
-
-            <span></span>
-            <span></span>
-            <span class="active"></span>
-
-          </div>
-
-
-          <div class="terminal-body">
-
-            <div class="terminal-line">
-
-              <span class="prompt">
-                $
-              </span>
-
-              <span class="command">
-                security-status
-              </span>
-
-            </div>
-
-
-            <div class="output">
-
-              [network] <span class="green">ONLINE</span>
-
-            </div>
-
-            <div class="output">
-
-              [firewall] <span class="green">PROTECTED</span>
-
-            </div>
-
-            <div class="output">
-
-              [identity] <span class="green">MONITORED</span>
-
-            </div>
-
-            <div class="output">
-
-              [events] <span class="blue">NORMALIZED</span>
-
-            </div>
-
-            <div class="output">
-
-              [validation] <span class="green">ACTIVE</span>
-
-            </div>
-
-            <br>
-
-
-            <div class="terminal-line">
-
-              <span class="prompt">
-                $
-              </span>
-
-              <span class="command">
-                career --target
-              </span>
-
-            </div>
-
-
-            <div class="output">
-
-              → Network Security
-
-            </div>
-
-            <div class="output">
-
-              → Security Operations
-
-            </div>
-
-            <div class="output">
-
-              → Cybersecurity Engineering
-
-            </div>
-
-
-            <br>
-
-
-            <div class="terminal-line">
-
-              <span class="prompt">
-                $
-              </span>
-
-              <span class="command">
-                echo $MISSION
-              </span>
-
-            </div>
-
-
-            <div class="output yellow">
-
-              Secure infrastructure.
-              Detect threats.
-              Automate defense.
-
-            </div>
+          <div class="education-description">
+
+            Academic foundation in information technology,
+            computing and IT management, supporting subsequent
+            professional development across infrastructure,
+            networking and cybersecurity.
 
           </div>
 
@@ -1632,1127 +2980,341 @@
 
       </div>
 
-    </section>
+
+    </div>
+
+  </div>
+
+</section>
 
 
-    <!-- =====================================================
-         ABOUT
-    ====================================================== -->
+<!-- =====================================================
+     CERTIFICATIONS
+====================================================== -->
 
-    <section id="about">
+<section id="credentials">
 
-      <div class="wrap">
+  <div class="wrap">
 
-        <div class="section-head reveal">
+    <div class="section-head reveal">
 
-          <div class="eyebrow">
-            whoami --verbose
-          </div>
-
-          <h2 class="section-title">
-            About Me
-          </h2>
-
-          <p class="section-subtitle">
-            Infrastructure experience with a growing focus on cybersecurity
-            and security engineering.
-          </p>
-
-        </div>
-
-
-        <div class="about-grid">
-
-          <div class="about-text reveal">
-
-            <p>
-
-              I am an <span class="highlight">
-              IT System Administrator
-              </span>
-              with more than five years of experience across IT support,
-              networking, infrastructure and enterprise operations.
-
-            </p>
-
-
-            <p>
-
-              My technical foundation includes
-              <span class="highlight">
-              network troubleshooting, Cisco switching, VLANs,
-              routing, FortiGate firewall administration, Windows Server,
-              Active Directory and Microsoft 365
-              </span>.
-
-            </p>
-
-
-            <p>
-
-              My current career direction is cybersecurity. I am expanding
-              from infrastructure and network security into
-              <span class="highlight">
-              security operations, security event processing,
-              SIEM concepts, Python automation and security engineering
-              </span>.
-
-            </p>
-
-
-            <p>
-
-              I believe strong cybersecurity starts with understanding the
-              infrastructure being protected — networks, identities,
-              endpoints, firewalls, logs and the applications running on top
-              of them.
-
-            </p>
-
-          </div>
-
-
-          <!-- CAREER PATH -->
-
-          <div class="career-path reveal">
-
-            <div class="career-label">
-              /etc/career/path.conf
-            </div>
-
-            <div class="path">
-
-              <div class="path-item">
-                IT SUPPORT
-              </div>
-
-              <div class="path-arrow">
-                ↓
-              </div>
-
-              <div class="path-item">
-                NETWORK & INFRASTRUCTURE
-              </div>
-
-              <div class="path-arrow">
-                ↓
-              </div>
-
-              <div class="path-item current">
-                NETWORK SECURITY
-              </div>
-
-              <div class="path-arrow">
-                ↓
-              </div>
-
-              <div class="path-item">
-                SECURITY OPERATIONS
-              </div>
-
-              <div class="path-arrow">
-                ↓
-              </div>
-
-              <div class="path-item">
-                SECURITY ENGINEERING
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
+      <div class="eyebrow">
+        cat credentials.txt
       </div>
 
-    </section>
+      <h2 class="section-title">
+        Certifications & Training
+      </h2>
+
+      <p class="section-subtitle">
+        Professional training supporting the transition from
+        infrastructure and networking into cybersecurity.
+      </p>
+
+    </div>
 
 
-    <!-- =====================================================
-         EXPERIENCE
-    ====================================================== -->
+    <div class="credential-grid reveal">
 
-    <section id="experience">
 
-      <div class="wrap">
+      <div>
 
-        <div class="section-head reveal">
-
-          <div class="eyebrow">
-            cat career.log
-          </div>
-
-          <h2 class="section-title">
-            Experience
-          </h2>
-
+        <div class="skill-title">
+          Security Training
         </div>
 
+        <ul class="credential-list">
 
-        <div class="experience-log reveal">
+          <li>
 
-
-          <!-- CURRENT -->
-
-          <div class="experience-entry">
-
-            <div class="experience-date">
-              2026 — PRESENT
+            <div class="credential-name">
+              CISSP Training / Preparation
             </div>
 
-            <div>
-
-              <div class="experience-role">
-                IT System Administrator
-              </div>
-
-              <div class="experience-company">
-                Digimaze Marketing Pvt. Ltd. · Mumbai
-              </div>
-
-              <div class="experience-description">
-
-                Managing enterprise IT infrastructure with focus on
-                networking, firewall operations, Microsoft 365,
-                infrastructure troubleshooting and security controls.
-
-                Also contributing to security-focused engineering work
-                involving event normalization, validation and API-based
-                processing.
-
-              </div>
-
+            <div class="credential-note">
+              CyberFrat
             </div>
 
-          </div>
-
-
-          <!-- LITMUS -->
-
-          <div class="experience-entry">
-
-            <div class="experience-date">
-              2025 — 2026
-            </div>
-
-            <div>
-
-              <div class="experience-role">
-                IT Associate Consultant
-              </div>
-
-              <div class="experience-company">
-                Litmus Information System LLP · Gujarat
-              </div>
-
-              <div class="experience-description">
-
-                Worked across enterprise infrastructure, networking,
-                troubleshooting and client IT environments, developing
-                hands-on experience with network and security technologies.
-
-              </div>
-
-            </div>
-
-          </div>
-
-
-          <!-- TEAMLEASE -->
-
-          <div class="experience-entry">
-
-            <div class="experience-date">
-              2021 — 2025
-            </div>
-
-            <div>
-
-              <div class="experience-role">
-                Desktop Support Engineer
-              </div>
-
-              <div class="experience-company">
-                TeamLease Digital Pvt. Ltd. · Odisha
-              </div>
-
-              <div class="experience-description">
-
-                Provided enterprise desktop, hardware, software and
-                networking support while developing the operational
-                troubleshooting foundation that later expanded into
-                infrastructure and network administration.
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         PROJECTS
-    ====================================================== -->
-
-    <section id="projects">
-
-      <div class="wrap">
-
-        <div class="section-head reveal">
-
-          <div class="eyebrow">
-            ls /projects/security
-          </div>
-
-          <h2 class="section-title">
-            Cybersecurity Projects
-          </h2>
-
-          <p class="section-subtitle">
-
-            Practical work connecting security operations, event processing,
-            networking and automation.
-
-          </p>
-
-        </div>
-
-
-        <!-- PRIMARY SECURITY PROJECT -->
-
-        <div class="project-card reveal">
-
-          <div class="project-grid">
-
-
-            <div>
-
-              <div class="project-label">
-                PRIMARY PROJECT · SECURITY ENGINEERING
-              </div>
-
-              <h3 class="project-title">
-                OCSF Security Event Normalization & Validation
-              </h3>
-
-              <div class="project-stack">
-                Python · FastAPI · OCSF · JSON · REST API · Validation
-              </div>
-
-
-              <p class="project-description">
-
-                Contributing to a security-event processing platform that
-                transforms heterogeneous security telemetry into a
-                standardized OCSF-compatible structure.
-
-                The work involves field transformation, data-type
-                conversion, enumeration mapping, validation and
-                re-validation of security events.
-
-              </p>
-
-
-              <div class="project-features">
-
-                <div class="project-feature">
-                  Schema Detection
-                </div>
-
-                <div class="project-feature">
-                  Field Transformation
-                </div>
-
-                <div class="project-feature">
-                  Data Type Conversion
-                </div>
-
-                <div class="project-feature">
-                  Enumeration Mapping
-                </div>
-
-                <div class="project-feature">
-                  OCSF Normalization
-                </div>
-
-                <div class="project-feature">
-                  Event Validation
-                </div>
-
-                <div class="project-feature">
-                  Re-Validation API
-                </div>
-
-                <div class="project-feature">
-                  Security Automation
-                </div>
-
-              </div>
-
-            </div>
-
-
-            <!-- PIPELINE -->
-
-            <div class="pipeline">
-
-              <div class="pipeline-item">
-
-                <div class="pipeline-number">
-                  01
-                </div>
-
-                <span>
-                  Security Event
-                </span>
-
-              </div>
-
-
-              <div class="pipeline-arrow">
-                ↓
-              </div>
-
-
-              <div class="pipeline-item">
-
-                <div class="pipeline-number">
-                  02
-                </div>
-
-                <span>
-                  Schema Detection
-                </span>
-
-              </div>
-
-
-              <div class="pipeline-arrow">
-                ↓
-              </div>
-
-
-              <div class="pipeline-item">
-
-                <div class="pipeline-number">
-                  03
-                </div>
-
-                <span>
-                  Field Transformation
-                </span>
-
-              </div>
-
-
-              <div class="pipeline-arrow">
-                ↓
-              </div>
-
-
-              <div class="pipeline-item">
-
-                <div class="pipeline-number">
-                  04
-                </div>
-
-                <span>
-                  OCSF Normalization
-                </span>
-
-              </div>
-
-
-              <div class="pipeline-arrow">
-                ↓
-              </div>
-
-
-              <div class="pipeline-item">
-
-                <div class="pipeline-number">
-                  05
-                </div>
-
-                <span>
-                  Validation
-                </span>
-
-              </div>
-
-
-              <div class="pipeline-arrow">
-                ↓
-              </div>
-
-
-              <div class="pipeline-item">
-
-                <div class="pipeline-number">
-                  06
-                </div>
-
-                <span>
-                  Re-Validation API
-                </span>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <!-- INFRASTRUCTURE PROJECT -->
-
-        <div class="secondary-project reveal">
-
-          <div>
-
-            <div class="project-label">
-              INFRASTRUCTURE · NETWORK SECURITY
-            </div>
-
-            <h3>
-              Greenfield IT Infrastructure Deployment
-            </h3>
-
-            <div class="client">
-              Jesons Industries
-            </div>
-
-            <p>
-
-              Contributed to a greenfield infrastructure deployment involving
-              network, server-room and physical security systems for a
-              manufacturing environment.
-
-            </p>
-
-          </div>
-
-
-          <ul class="project-list">
-
-            <li>
-              Network and server rack deployment
-            </li>
-
-            <li>
-              Active Directory infrastructure
-            </li>
-
-            <li>
-              Network connectivity and switching
-            </li>
-
-            <li>
-              CCTV integration
-            </li>
-
-            <li>
-              Access control systems
-            </li>
-
-            <li>
-              Site infrastructure troubleshooting
-            </li>
-
-          </ul>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         SKILLS
-    ====================================================== -->
-
-    <section id="skills">
-
-      <div class="wrap">
-
-        <div class="section-head reveal">
-
-          <div class="eyebrow">
-            show security-stack
-          </div>
-
-          <h2 class="section-title">
-            Technical Skills
-          </h2>
-
-          <p class="section-subtitle">
-
-            A combination of infrastructure fundamentals and
-            cybersecurity-focused technologies.
-
-          </p>
-
-        </div>
-
-
-        <div class="reveal">
-
-
-          <!-- SECURITY -->
-
-          <div class="skill-group">
-
-            <div class="skill-title">
-              Security & Firewall
-            </div>
-
-            <div class="skill-grid">
-
-              <div class="skill">
-                <span class="skill-dot"></span>
-                <span>FortiGate Firewall</span>
-              </div>
-
-              <div class="skill">
-                <span class="skill-dot"></span>
-                <span>Firewall Policies</span>
-              </div>
-
-              <div class="skill">
-                <span class="skill-dot"></span>
-                <span>VPN</span>
-              </div>
-
-              <div class="skill">
-                <span class="skill-dot"></span>
-                <span>Network Security</span>
-              </div>
-
-              <div class="skill">
-                <span class="skill-dot"></span>
-                <span>Access Control</span>
-              </div>
-
-              <div class="skill">
-                <span class="skill-dot"></span>
-                <span>Security Monitoring</span>
-              </div>
-
-            </div>
-
-          </div>
-
-
-          <!-- NETWORK -->
-
-          <div class="skill-group">
-
-            <div class="skill-title">
-              Network & Infrastructure
-            </div>
-
-            <div class="skill-grid">
-
-              <div class="skill">
-                <span class="skill-dot"></span>
-                <span>Cisco Switching</span>
-              </div>
-
-              <div class="skill">
-                <span class="skill-dot"></span>
-                <span>VLAN</span>
-              </div>
-
-              <div class="skill">
-                <span class="skill-dot"></span>
-                <span>DHCP</span>
-              </div>
-
-              <div class="skill">
-                <span class="skill-dot"></span>
-                <span>DNS</span>
-              </div>
-
-              <div class="skill">
-                <span class="skill-dot"></span>
-                <span>OSPF</span>
-              </div>
-
-              <div class="skill">
-                <span class="skill-dot"></span>
-                <span>BGP</span>
-              </div>
-
-              <div class="skill">
-                <span class="skill-dot"></span>
-                <span>Active Directory</span>
-              </div>
-
-              <div class="skill">
-                <span class="skill-dot"></span>
-                <span>Windows Server</span>
-              </div>
-
-            </div>
-
-          </div>
-
-
-          <!-- SECURITY ENGINEERING -->
-
-          <div class="skill-group">
-
-            <div class="skill-title">
-              Security Engineering & Automation
-            </div>
-
-            <div class="skill-grid">
-
-              <div class="skill">
-                <span class="skill-dot"></span>
-                <span>Python</span>
-              </div>
-
-              <div class="skill">
-                <span class="skill-dot"></span>
-                <span>FastAPI</span>
-              </div>
-
-              <div class="skill">
-                <span class="skill-dot"></span>
-                <span>REST APIs</span>
-              </div>
-
-              <div class="skill">
-                <span class="skill-dot"></span>
-                <span>JSON</span>
-              </div>
-
-              <div class="skill">
-                <span class="skill-dot"></span>
-                <span>OCSF</span>
-              </div>
-
-              <div class="skill">
-                <span class="skill-dot"></span>
-                <span>Event Validation</span>
-              </div>
-
-              <div class="skill">
-                <span class="skill-dot"></span>
-                <span>Data Transformation</span>
-              </div>
-
-              <div class="skill">
-                <span class="skill-dot"></span>
-                <span>Git / GitHub</span>
-              </div>
-
-            </div>
-
-          </div>
-
-
-          <!-- OPERATIONS -->
-
-          <div class="skill-group">
-
-            <div class="skill-title">
-              Monitoring & IT Operations
-            </div>
-
-            <div class="skill-grid">
-
-              <div class="skill">
-                <span class="skill-dot"></span>
-                <span>Network Monitoring</span>
-              </div>
-
-              <div class="skill">
-                <span class="skill-dot"></span>
-                <span>Incident Troubleshooting</span>
-              </div>
-
-              <div class="skill">
-                <span class="skill-dot"></span>
-                <span>Microsoft 365</span>
-              </div>
-
-              <div class="skill">
-                <span class="skill-dot"></span>
-                <span>IT Operations</span>
-              </div>
-
-              <div class="skill">
-                <span class="skill-dot"></span>
-                <span>Service Management</span>
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         SECURITY FOCUS
-    ====================================================== -->
-
-    <section>
-
-      <div class="wrap">
-
-        <div class="section-head reveal">
-
-          <div class="eyebrow">
-            security-focus --current
-          </div>
-
-          <h2 class="section-title">
-            Cybersecurity Focus
-          </h2>
-
-        </div>
-
-
-        <div class="security-focus reveal">
-
-
-          <div class="focus-card">
-
-            <div class="focus-icon">
-              [01]
-            </div>
-
-            <h3>
-              Network Security
-            </h3>
-
-            <p>
-
-              Firewalls, network segmentation, VLANs, routing,
-              access controls and secure infrastructure.
-
-            </p>
-
-          </div>
-
-
-          <div class="focus-card">
-
-            <div class="focus-icon">
-              [02]
-            </div>
-
-            <h3>
-              Security Operations
-            </h3>
-
-            <p>
-
-              Security monitoring, event analysis, validation,
-              logs and incident troubleshooting concepts.
-
-            </p>
-
-          </div>
-
-
-          <div class="focus-card">
-
-            <div class="focus-icon">
-              [03]
-            </div>
-
-            <h3>
-              Security Engineering
-            </h3>
-
-            <p>
-
-              Security event processing, OCSF normalization,
-              APIs and validation pipelines.
-
-            </p>
-
-          </div>
-
-
-          <div class="focus-card">
-
-            <div class="focus-icon">
-              [04]
-            </div>
-
-            <h3>
-              Automation
-            </h3>
-
-            <p>
-
-              Python-based automation and API-driven workflows
-              for security and infrastructure operations.
-
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         CREDENTIALS
-    ====================================================== -->
-
-    <section id="credentials">
-
-      <div class="wrap">
-
-        <div class="section-head reveal">
-
-          <div class="eyebrow">
-            cat credentials.txt
-          </div>
-
-          <h2 class="section-title">
-            Certifications & Education
-          </h2>
-
-        </div>
-
-
-        <div class="credential-grid reveal">
-
-
-          <div>
-
-            <div class="skill-title">
-              Training & Certifications
-            </div>
-
-            <ul class="credential-list">
-
-              <li>
-
-                <div class="credential-name">
-                  CISSP Training / Preparation
-                </div>
-
-                <div class="credential-note">
-                  CyberFrat
-                </div>
-
-              </li>
-
-
-              <li>
-
-                <div class="credential-name">
-                  NSE4 Firewall Training
-                </div>
-
-                <div class="credential-note">
-                  Fortinet-focused training
-                </div>
-
-              </li>
-
-
-              <li>
-
-                <div class="credential-name">
-                  Cybersecurity Training
-                </div>
-
-                <div class="credential-note">
-                  Tech Mahindra Foundation
-                </div>
-
-              </li>
-
-            </ul>
-
-          </div>
-
-
-          <div>
-
-            <div class="skill-title">
-              Education
-            </div>
-
-            <ul class="credential-list">
-
-              <li>
-
-                <div class="credential-name">
-                  B.Sc. in IT Management
-                </div>
-
-                <div class="credential-note">
-                  Utkal University · 2017 — 2020
-                </div>
-
-              </li>
-
-            </ul>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         CAREER DIRECTION
-    ====================================================== -->
-
-    <section>
-
-      <div class="wrap">
-
-        <div class="direction-card reveal">
-
-          <div class="eyebrow">
-            cat career-direction.conf
-          </div>
-
-          <h3>
-            Moving from infrastructure to cybersecurity.
-          </h3>
-
-          <p>
-
-            My goal is to build on my network and infrastructure background
-            and progress into cybersecurity-focused roles where I can work
-            with network security, security operations, SIEM technologies,
-            threat detection, security engineering and automation.
-
-          </p>
-
-
-          <div class="direction-tags">
-
-            <span class="direction-tag">
-              NETWORK SECURITY
+            <span class="credential-status">
+              TRAINING
             </span>
 
-            <span class="direction-tag">
-              SOC
+          </li>
+
+
+          <li>
+
+            <div class="credential-name">
+              NSE4 Firewall Training
+            </div>
+
+            <div class="credential-note">
+              Fortinet-focused training
+            </div>
+
+            <span class="credential-status">
+              TRAINING
             </span>
 
-            <span class="direction-tag">
-              SIEM
+          </li>
+
+
+          <li>
+
+            <div class="credential-name">
+              Cybersecurity Training
+            </div>
+
+            <div class="credential-note">
+              Tech Mahindra Foundation
+            </div>
+
+            <span class="credential-status">
+              COMPLETED TRAINING
             </span>
 
-            <span class="direction-tag">
-              SECURITY OPERATIONS
-            </span>
+          </li>
 
-            <span class="direction-tag">
-              THREAT DETECTION
-            </span>
-
-            <span class="direction-tag">
-              SECURITY ENGINEERING
-            </span>
-
-            <span class="direction-tag">
-              PYTHON AUTOMATION
-            </span>
-
-            <span class="direction-tag">
-              CLOUD SECURITY
-            </span>
-
-          </div>
-
-        </div>
+        </ul>
 
       </div>
 
-    </section>
 
+      <div>
 
-    <!-- =====================================================
-         CONTACT
-    ====================================================== -->
-
-    <section id="contact">
-
-      <div class="wrap">
-
-        <div class="reveal">
-
-          <div class="eyebrow">
-            ping pradeep --contact
-          </div>
-
-          <h2 class="section-title">
-            Let's Connect
-          </h2>
-
-          <p>
-
-            Interested in cybersecurity, network security, security
-            operations and security engineering opportunities.
-
-            Feel free to connect and discuss technology, infrastructure
-            security and cybersecurity.
-
-          </p>
-
-
-          <div class="contact-row">
-
-            <a
-              class="btn btn-primary"
-              href="https://www.linkedin.com/in/pradeep-kumar-patra-83824a1b1"
-              target="_blank"
-              rel="noopener"
-            >
-              LinkedIn ↗
-            </a>
-
-
-            <a
-              class="btn btn-ghost"
-              href="mailto:pradeepkumarpatra826@gmail.com"
-            >
-              pradeepkumarpatra826@gmail.com ✎
-            </a>
-
-          </div>
-
+        <div class="skill-title">
+          Education
         </div>
+
+        <ul class="credential-list">
+
+          <li>
+
+            <div class="credential-name">
+              B.Sc. in IT Management
+            </div>
+
+            <div class="credential-note">
+              Kalinga University · 2017 — 2020
+            </div>
+
+            <span class="credential-status">
+              COMPLETED
+            </span>
+
+          </li>
+
+        </ul>
 
       </div>
 
-    </section>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     TOOLS
+====================================================== -->
+
+<section>
+
+  <div class="wrap">
+
+    <div class="section-head reveal">
+
+      <div class="eyebrow">
+        ls /tools
+      </div>
+
+      <h2 class="section-title">
+        Tools & Technologies
+      </h2>
+
+    </div>
+
+
+    <div class="tools-box reveal">
+
+      <div class="tools-list">
+
+        <span class="tool-tag">FortiGate</span>
+        <span class="tool-tag">Cisco</span>
+        <span class="tool-tag">Microsoft 365</span>
+        <span class="tool-tag">Exchange Online</span>
+        <span class="tool-tag">Active Directory</span>
+        <span class="tool-tag">Windows Server</span>
+        <span class="tool-tag">Microsoft Defender</span>
+        <span class="tool-tag">Python</span>
+        <span class="tool-tag">FastAPI</span>
+        <span class="tool-tag">REST API</span>
+        <span class="tool-tag">JSON</span>
+        <span class="tool-tag">OCSF</span>
+        <span class="tool-tag">Pytest</span>
+        <span class="tool-tag">Git</span>
+        <span class="tool-tag">GitHub</span>
+        <span class="tool-tag">Linux</span>
+        <span class="tool-tag">Docker</span>
+        <span class="tool-tag">DNS</span>
+        <span class="tool-tag">DHCP</span>
+        <span class="tool-tag">VLAN</span>
+        <span class="tool-tag">OSPF</span>
+        <span class="tool-tag">BGP</span>
+        <span class="tool-tag">VPN</span>
+        <span class="tool-tag">SNMP</span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     CAREER DIRECTION
+====================================================== -->
+
+<section>
+
+  <div class="wrap">
+
+    <div class="direction-card reveal">
+
+      <div class="eyebrow">
+        cat career-direction.conf
+      </div>
+
+      <h3>
+        Building toward cybersecurity engineering.
+      </h3>
+
+      <p>
+
+        My goal is to build on my network and infrastructure
+        background and progress into cybersecurity-focused roles
+        where I can work with network security, security
+        operations, SIEM technologies, threat detection,
+        security engineering and automation.
+
+      </p>
+
+
+      <div class="direction-tags">
+
+        <span class="direction-tag">
+          NETWORK SECURITY
+        </span>
+
+        <span class="direction-tag">
+          SOC
+        </span>
+
+        <span class="direction-tag">
+          SIEM
+        </span>
+
+        <span class="direction-tag">
+          SECURITY OPERATIONS
+        </span>
+
+        <span class="direction-tag">
+          THREAT DETECTION
+        </span>
+
+        <span class="direction-tag">
+          SECURITY ENGINEERING
+        </span>
+
+        <span class="direction-tag">
+          PYTHON AUTOMATION
+        </span>
+
+        <span class="direction-tag">
+          CLOUD SECURITY
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     CONTACT
+====================================================== -->
+
+<section id="contact">
+
+  <div class="wrap">
+
+    <div class="reveal">
+
+      <div class="eyebrow">
+        ping pradeep --contact
+      </div>
+
+      <h2 class="section-title">
+        Let's Connect
+      </h2>
+
+      <p>
+
+        Interested in cybersecurity, network security,
+        security operations, system administration and
+        security engineering opportunities.
+
+        Feel free to connect and discuss technology,
+        infrastructure security and cybersecurity.
+
+      </p>
+
+
+      <div class="contact-row">
+
+        <a
+          class="btn btn-primary"
+          href="https://www.linkedin.com/in/pradeep-kumar-patra-83824a1b1"
+          target="_blank"
+          rel="noopener"
+        >
+          LinkedIn ↗
+        </a>
+
+
+        <a
+          class="btn btn-ghost"
+          href="https://github.com/YOUR_GITHUB_USERNAME"
+          target="_blank"
+          rel="noopener"
+        >
+          GitHub ↗
+        </a>
+
+
+        <a
+          class="btn btn-ghost"
+          href="mailto:pradeepkumarpatra826@gmail.com"
+        >
+          Email ✎
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+```
 
   </main>
-
 
   <!-- =======================================================
        FOOTER
@@ -2760,18 +3322,25 @@
 
   <footer>
 
-    <div class="wrap">
+```
+<div class="wrap">
 
-      Pradeep Kumar Patra · Mumbai, India ·
+  Pradeep Kumar Patra · Mumbai, India ·
 
-      <span style="color:var(--accent);">
-        Security-focused IT Professional
-      </span>
+  <span style="color:var(--accent);">
+    Security-focused IT Professional
+  </span>
 
-    </div>
+  <br><br>
+
+  <span>
+    Infrastructure → Network Security → Cybersecurity
+  </span>
+
+</div>
+```
 
   </footer>
-
 
   <!-- =======================================================
        JAVASCRIPT
@@ -2971,7 +3540,7 @@
 
 
     /* =========================================================
-       CURRENT YEAR / CONSOLE MESSAGE
+       CONSOLE MESSAGE
     ========================================================= */
 
     console.log(
@@ -2984,6 +3553,12 @@
       "%c[CAREER]",
       "color:#67a9ff;font-weight:bold;",
       "Infrastructure → Network Security → Cybersecurity"
+    );
+
+    console.log(
+      "%c[STATUS]",
+      "color:#48e08a;font-weight:bold;",
+      "Systems operational."
     );
 
   </script>
